@@ -10,9 +10,11 @@
   --green: #288d52;
   --red: #be3939;
   --yellow: #f5c518;
+  --orange: #fc6e51;
   --blue: #0071e3;
   --transparent-blue: #0071e34b;
   --light-blue: #00a0e3;
+  --purple: #ac92ec;
   --font-family: 'SFPro', sans-serif;
   --font-size-title: 4rem;
   --font-size-subtitle: 1.3rem;
@@ -623,6 +625,43 @@ footer p a {
   font-weight: var(--font-weight-bold);
   color: var(--light-blue);
   text-decoration: none;
+  animation: Color 8s linear infinite;
+}
+
+footer p a:hover {
+  animation: Color 0.5s linear infinite;
+}
+
+@keyframes Color {
+  0% {
+    color: #dacff8;
+    text-shadow: 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec;
+  }
+
+  20% {
+    color: #a6e2f8;
+    text-shadow: 0 0 5px #4fc1e9, 0 0 5px #4fc1e9, 0 0 5px #4fc1e9, 0 0 5px #4fc1e9;
+  }
+
+  40% {
+    color: #fce4a6;
+    text-shadow: 0 0 5px #ffce54, 0 0 5px #ffce54, 0 0 5px #ffce54, 0 0 5px #ffce54;
+  }
+
+  60% {
+    color: #fcbeb2;
+    text-shadow: 0 0 5px #fc6e51, 0 0 5px #fc6e51, 0 0 5px #fc6e51, 0 0 5px #fc6e51;
+  }
+
+  80% {
+    color: #fcbac1;
+    text-shadow: 0 0 5px #ed5565, 0 0 5px #ed5565, 0 0 5px #ed5565, 0 0 5px #ed5565;
+  }
+
+  100% {
+    color: #dacff8;
+    text-shadow: 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec;
+  }
 }
 
 /* MEDIA QUERIES */

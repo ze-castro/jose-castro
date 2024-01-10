@@ -7,7 +7,7 @@ function toggleDescription(box) {
 function scrollToSection(sectionName) {
   var section = document.getElementById(sectionName);
   var sectionOffset = section.offsetTop;
-  var offset = 80;
+  var offset = 0;
 
   window.scrollTo({
     top: sectionOffset - offset,

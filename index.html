@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/logo.ico" type="image/ico" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="js/dom-helper.js"></script>
+    <title>The Website Builder</title>
+  </head>
+  <body>
+    <!-- <nav>
+      <h3>SALE:</h3>
+      <p>All simple websites 20% off!</p>
+      <p>Until end of the year</p>
+    </nav> -->
+    <main>
+      <section id="welcome">
+        <div class="logo">
+          <img src="assets/logo.png" alt="logo" />
+          <h4>the-website-builder</h4>
+        </div>
+        <h1>Explore a world of limitless possibilities.</h1>
+        <!-- <p>Starting at <del><span style="color: var(--black);">250€</span></del> 200€</p> -->
+        <p>Starting at 25€ per month</p>
+        <div class="links">
+          <span class="btn-and-animation">
+            <button onclick="scrollToSection('contact')">Contact</button>
+            <span class="btn-animation"></span>
+          </span>
+          <a onclick="scrollToSection('pricing')">Learn more ></a>
+        </div>
+        <img class="welcome-image" src="assets/welcome.webp" alt="welcome-image" />
+      </section>
+      <section id="pricing">
+        <h1>Get Started</h1>
+        <p>Pricing for everyone</p>
+        <div class="pricing-cards">
+          <div class="card">
+            <div class="card-left">
+              <h2>Simple Website</h2>
+              <ul>
+                <li>Multiple Pages</li>
+                <li>1 Domain</li>
+                <li>1 Email account</li>
+                <li>1 Update per year</li>
+                <li>Email Support</li>
+              </ul>
+              <!-- <h3><del><span style="color: var(--black);">250€</span></del> 200€ / year</h3> -->
+              <h3>25€ / month</h3>
+              <button onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+            <div class="card-right" id="simple-website">
+              <img src="assets/simple-website.webp" alt="simple-website" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-right"><img src="assets/internal-system.webp" alt="internal-system" /></div>
+            <div class="card-left">
+              <h2>Internal Management System</h2>
+              <ul>
+                <li>Comprehensive Admin Panel</li>
+                <li>Advanced Commission Trackingt</li>
+                <li>Inventory Optimization</li>
+                <li>Integrated Project Management</li>
+                <li>Automated Reporting and Analytics</li>
+              </ul>
+              <h3>300€ / month</h3>
+              <button onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <h2>Personalized Website</h2>
+              <ul>
+                <li>Unlimited pages</li>
+                <li>Your own domain</li>
+                <li>Unlimited email accounts</li>
+                <li>E-commerce</li>
+                <li>10 Updates per year</li>
+                <li>Call Support</li>
+              </ul>
+              <h3>Contact us for a quote</h3>
+              <button onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+            <div class="card-right">
+              <img src="assets/godly-website.webp" alt="quote-website" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="clients">
+        <h1>Want to see our work?</h1>
+        <p>Confident clients rely on our expertise and trust our work</p>
+        <div class="websites">
+          <div class="website">
+            <a href="https://exclusivecardetailing.xyz" target="_blank" rel="noopener noreferrer"></a>
+            <img src="assets/exclusive-car-detailing.webp" alt="website" />
+          </div>
+          <div class="website">
+            <a></a>
+            <img src="assets/happies.webp" alt="website" />
+          </div>
+        </div>
+      </section>
+      <section id="faq">
+        <h1>Frequently Asked Questions</h1>
+        <p>Here are some of the most common questions we get asked</p>
+        <div class="faq-container">
+          <div class="left-container">
+            <div class="box" onclick="toggleDescription(this)">
+              <h2 class="box-title">What is The Website Builder?</h2>
+              <p class="box-description">
+                The Website Builder is a company specialized in crafting personalized websites. With expertise in web
+                development, our team creates stunning and tailored online platforms to meet your unique needs. From
+                captivating designs to seamless functionality, we deliver top-notch websites that effectively represent
+                your brand and engage your audience.
+              </p>
+            </div>
+            <div class="box" onclick="toggleDescription(this)">
+              <h2 class="box-title">Do you offer website maintenance services?</h2>
+              <p class="box-description">
+                Yes, we offer website maintenance in every package to ensure your website remains up-to-date, secure,
+                and functioning optimally. Our maintenance services include regular backups, software updates, and
+                technical support.
+              </p>
+            </div>
+            <div class="box" onclick="toggleDescription(this)">
+              <h2 class="box-title">Do you provide search engine optimization (SEO) services?</h2>
+              <p class="box-description">
+                Yes, we offer comprehensive SEO services to improve your website's visibility on search engines. Our
+                strategies include keyword research, on-page optimization, backlink building, and content optimization
+                to enhance your website's rankings.
+              </p>
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="box" onclick="toggleDescription(this)">
+              <h2 class="box-title">Can you integrate e-commerce functionality into my website?</h2>
+              <p class="box-description">
+                Certainly! In our best package, we create a store-like website and integrate shopping cart systems,
+                secure payment gateways, and inventory management solutions to enable smooth online transactions.
+              </p>
+            </div>
+            <div class="box" onclick="toggleDescription(this)">
+              <h2 class="box-title">How long does it take to build a website?</h2>
+              <p class="box-description">
+                The timeframe for building a website depends on various factors such as project complexity and client
+                requirements. Typically, our team works diligently to deliver a fully functional website within 2-8
+                weeks.
+              </p>
+            </div>
+            <div class="box" onclick="toggleDescription(this)">
+              <h2 class="box-title">What if I need assistance after my website is launched?</h2>
+              <p class="box-description">
+                We provide ongoing customer support even after your website is launched. Our dedicated support team is
+                available to address any questions, concerns, or technical issues you may encounter, ensuring a seamless
+                website experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1>Any questions?</h1>
+        <p>Send us a message, and we will get back to you as soon as possible</p>
+        <form action="https://formspree.io/f/mdovqjdg" method="POST">
+          <input type="text" name="name" placeholder="Ryan Reynolds" required />
+          <input type="email" name="email" placeholder="example@email.com" required />
+          <textarea name="message" placeholder="Do you sell hot dogs?" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        @2024 The Website Builder - Made by
+        <a href="https://www.instagram.com/the_website_builder/" target="_blank" rel="noopener noreferrer"
+          >@thewebsitebuilder</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

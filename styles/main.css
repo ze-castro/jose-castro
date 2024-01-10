@@ -340,6 +340,10 @@ nav p {
   object-position: 45.5%;
 }
 
+#quote-website img {
+  object-position: 46%;
+}
+
 .card-left {
   justify-content: space-between;
   padding: 2rem 0;

@@ -272,6 +272,7 @@ nav p {
 
 #welcome .welcome-image {
   width: 50rem;
+  max-width: 98%;
   height: 25rem;
   object-fit: cover;
   border-radius: 20px;
@@ -286,7 +287,6 @@ nav p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 15%;
 }
 
 #pricing h1 {
@@ -336,14 +336,6 @@ nav p {
   align-items: center;
 }
 
-#simple-website img {
-  object-position: 45.5%;
-}
-
-#quote-website img {
-  object-position: 46%;
-}
-
 .card-left {
   justify-content: space-between;
   padding: 2rem 0;
@@ -361,6 +353,7 @@ nav p {
   line-height: 2rem;
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-light);
+  padding: 0 2rem;
 }
 
 .card h3 {
@@ -384,6 +377,14 @@ nav p {
   object-fit: cover;
   border-radius: 1rem;
   z-index: 1;
+}
+
+#simple-website img {
+  object-position: 45.5%;
+}
+
+#quote-website img {
+  object-position: 46%;
 }
 
 /* CLIENTS */
@@ -573,7 +574,8 @@ nav p {
 }
 
 #contact form {
-  width: 50%;
+  width: 500px;
+  max-width: 500px;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -629,7 +631,7 @@ footer p a {
   font-weight: var(--font-weight-bold);
   color: var(--light-blue);
   text-decoration: none;
-  animation: Color 8s linear infinite;
+  animation: Color 4s linear infinite;
 }
 
 footer p a:hover {
@@ -639,32 +641,32 @@ footer p a:hover {
 @keyframes Color {
   0% {
     color: #dacff8;
-    text-shadow: 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec;
+    text-shadow: 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec;
   }
 
   20% {
     color: #a6e2f8;
-    text-shadow: 0 0 5px #4fc1e9, 0 0 5px #4fc1e9, 0 0 5px #4fc1e9, 0 0 5px #4fc1e9;
+    text-shadow: 0 0 3px #4fc1e9, 0 0 3px #4fc1e9, 0 0 3px #4fc1e9, 0 0 3px #4fc1e9;
   }
 
   40% {
     color: #fce4a6;
-    text-shadow: 0 0 5px #ffce54, 0 0 5px #ffce54, 0 0 5px #ffce54, 0 0 5px #ffce54;
+    text-shadow: 0 0 3px #ffce54, 0 0 3px #ffce54, 0 0 3px #ffce54, 0 0 3px #ffce54;
   }
 
   60% {
     color: #fcbeb2;
-    text-shadow: 0 0 5px #fc6e51, 0 0 5px #fc6e51, 0 0 5px #fc6e51, 0 0 5px #fc6e51;
+    text-shadow: 0 0 3px #fc6e51, 0 0 3px #fc6e51, 0 0 3px #fc6e51, 0 0 3px #fc6e51;
   }
 
   80% {
     color: #fcbac1;
-    text-shadow: 0 0 5px #ed5565, 0 0 5px #ed5565, 0 0 5px #ed5565, 0 0 5px #ed5565;
+    text-shadow: 0 0 3px #ed5565, 0 0 3px #ed5565, 0 0 3px #ed5565, 0 0 3px #ed5565;
   }
 
   100% {
     color: #dacff8;
-    text-shadow: 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec, 0 0 5px #ac92ec;
+    text-shadow: 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec;
   }
 }
 
@@ -720,6 +722,7 @@ footer p a:hover {
   }
   .card {
     width: 100%;
+    max-width: 500px;
     min-height: 400px;
     flex-direction: column;
     justify-content: flex-start;
@@ -800,6 +803,7 @@ footer p a:hover {
     font-size: 1rem;
   }
   .faq-container {
+    max-width: 550px;
     flex-direction: column;
   }
   .left-container,

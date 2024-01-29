@@ -112,6 +112,40 @@ textarea:focus-visible {
   box-shadow: 0 0 0 0.1rem var(--transparent-blue);
 }
 
+#cookies {
+  width: 90%;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+}
+
+#cookies p {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-light);
+  color: var(--black);
+}
+
+#cookies button {
+  min-width: 100px;
+  height: 40px;
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-light);
+  color: var(--white);
+  background-color: var(--blue);
+}
+
 #welcome,
 #clients,
 #pricing,
@@ -682,7 +716,6 @@ footer p a:hover {
   nav {
     padding: 0 5%;
     gap: 5px;
-    height: 40px;
   }
   nav h3 {
     font-size: 1.1rem;
@@ -690,6 +723,24 @@ footer p a:hover {
   nav p {
     font-size: 1.1rem;
   }
+  #cookies {
+    width: 93%;
+    min-height: 40px;
+    height: auto;
+    padding: 1rem 1rem;
+    gap: 1.5rem;
+  }
+
+  #cookies p {
+    font-size: 0.9rem;
+  }
+
+  #cookies button {
+    min-width: 100px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
   #welcome h1 {
     width: 95%;
     font-size: 3rem;

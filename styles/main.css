@@ -664,13 +664,12 @@ footer p {
 
 footer p a {
   font-weight: var(--font-weight-bold);
-  color: var(--light-blue);
+  color: var(--blue) !important;
   text-decoration: none;
-  animation: Color 4s linear infinite;
 }
 
 footer p a:hover {
-  animation: Color 0.5s linear infinite;
+  animation: Color 1s linear infinite;
 }
 
 @keyframes Color {

@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <script src="js/dom-helper.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP68S7WD0X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-CP68S7WD0X');
+    </script>
     <title>The Website Builder</title>
   </head>
   <body>
@@ -20,7 +31,7 @@
       <div id="cookies">
         <p>This website uses cookies to ensure you get the best experience on our website.</p>
         <button onclick="acceptCookies()">Got it!</button>
-    </div>
+      </div>
       <section id="welcome">
         <div class="logo">
           <img src="assets/logo.png" alt="logo" />
@@ -28,7 +39,7 @@
         </div>
         <h1>Explore a world of limitless possibilities.</h1>
         <!-- <p>Starting at <del><span style="color: var(--black);">250€</span></del> 200€</p> -->
-        <p>Starting at <span class="prices" >0</span><span class="currency">€</span> per month</p>
+        <p>Starting at <span class="prices">0</span><span class="currency">€</span> per month</p>
         <div class="links">
           <span class="btn-and-animation">
             <button onclick="scrollToSection('contact')">Contact</button>
@@ -52,7 +63,7 @@
                 </li>
               </ul>
               <!-- <h3><del><span style="color: var(--black);">250€</span></del> 200€ / year</h3> -->
-              <h3><span class="prices" >0</span><span class="currency">€</span> / month</h3>
+              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
               <button onclick="writeDescription(0)">Get Started</button>
             </div>
             <div class="card-right" id="simple-website">
@@ -71,7 +82,7 @@
                   success. Customize every aspect of your store’s design, add products and start selling.
                 </li>
               </ul>
-              <h3><span class="prices" >0</span><span class="currency">€</span> / month</h3>
+              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
               <button onclick="writeDescription(1)">Get Started</button>
             </div>
           </div>
@@ -84,7 +95,7 @@
                   project oversight, and automated reporting and analytics for enhanced efficiency.
                 </li>
               </ul>
-              <h3><span class="prices" >0</span><span class="currency">€</span> / month</h3>
+              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
               <button onclick="writeDescription(2)">Get Started</button>
             </div>
             <div class="card-right" id="internal-system">
@@ -103,7 +114,7 @@
                   your business, whether you're just beginning or experiencing rapid growth.
                 </li>
               </ul>
-              <h3><span class="prices" >0</span><span class="currency">€</span> / month</h3>
+              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
               <button onclick="writeDescription(3)">Get Started</button>
             </div>
           </div>

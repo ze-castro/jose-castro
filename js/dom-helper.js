@@ -36,6 +36,27 @@ function writeDescription(num) {
 }
 
 //// TEXT TRANSLATION ////
+// open the language modal
+function openTranslate() {
+  const translateDiv = document.getElementById('translate')
+  const arrow = document.getElementById('openTranslate');
+  const close = document.getElementById('closeTranslate');
+  translateDiv.style.right = '0.5rem';
+  arrow.style.display = 'none';
+  close.style.display = 'block';
+}
+
+// close the language modal
+function closeTranslate() {
+  const translateDiv = document.getElementById('translate')
+  const arrow = document.getElementById('openTranslate');
+  const close = document.getElementById('closeTranslate');
+  translateDiv.style.right = '-8rem';
+  arrow.style.display = 'block';
+  close.style.display = 'none';
+}
+
+
 // check the language of the page
 function checkLanguage() {
   const language = localStorage.getItem('language');
@@ -51,6 +72,7 @@ function translateToPortuguese() {
   // change the language of the page
   document.documentElement.lang = 'pt';
   localStorage.setItem('language', 'pt');
+  closeTranslate();
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
     'Este site utiliza cookies para garantir que tenha a melhor experiência no nosso site.';
@@ -125,6 +147,7 @@ function translateToSpanish() {
   // change the language of the page
   document.documentElement.lang = 'es';
   localStorage.setItem('language', 'es');
+  closeTranslate();
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
     'Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.';

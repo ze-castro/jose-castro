@@ -33,13 +33,15 @@
         <button onclick="acceptCookies()">Got it!</button>
       </div>
       <section id="welcome">
+        <div class="translate" id="translate">
+          <i class="fa fa-close" id="closeTranslate" onclick="closeTranslate()"></i>
+          <i class="fa fa-flag" id="openTranslate" onclick="openTranslate()"></i>
+          <img src="assets/portugal.png" alt="portuguese" onclick="translateToPortuguese()">
+          <img src="assets/spain.png" alt="spanish" onclick="translateToSpanish()">
+        </div>
         <div class="logo">
           <img src="assets/logo.png" alt="logo" />
           <h4>the-website-builder</h4>
-        </div>
-        <div class="translate">
-          <img src="assets/portugal.png" alt="portuguese" onclick="translateToPortuguese()">
-          <img src="assets/spain.png" alt="spanish" onclick="translateToSpanish()">
         </div>
         <h1>Explore a world of limitless possibilities.</h1>
         <p>Starting at <span class="prices">0</span><span class="currency">€</span> per month</p>

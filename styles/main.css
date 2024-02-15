@@ -172,7 +172,7 @@ textarea:focus-visible {
   width: 175px;
   height: 55px;
   border-radius: 10px;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   background-color: var(--light-gray);
   top: 0;
   right: -8rem;
@@ -189,13 +189,15 @@ textarea:focus-visible {
 .translate img {
   width: 40px;
   height: 40px;
+  background-color: var(--black);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 0 0rem 2px rgba(0, 0, 0, 1);
+  transition: 0.2s;
 }
 
 .translate img:hover {
   box-shadow: 0 0 0rem 2px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
 }
 
 .translate i {

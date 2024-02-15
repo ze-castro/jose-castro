@@ -1,7 +1,15 @@
 // after the page is loaded
 window.onload = function () {
+  // get user location and adjust prices
   checkLocation();
-  checkCookies();
+  // check cookies
+  if (checkCookies()) {
+    // hide the cookies div
+    document.getElementById('cookies').style.display = 'none';
+    // if cookies accepted
+    // ...
+  }
+  // check the language of the page and translate text
   checkLanguage();
 };
 
@@ -38,24 +46,23 @@ function writeDescription(num) {
 //// TEXT TRANSLATION ////
 // open the language modal
 function openTranslate() {
-  const translateDiv = document.getElementById('translate')
+  const translateDiv = document.getElementById('translate');
   const arrow = document.getElementById('openTranslate');
   const close = document.getElementById('closeTranslate');
-  translateDiv.style.right = '0.5rem';
+  translateDiv.style.right = '-0.5rem';
   arrow.style.display = 'none';
   close.style.display = 'block';
 }
 
 // close the language modal
 function closeTranslate() {
-  const translateDiv = document.getElementById('translate')
+  const translateDiv = document.getElementById('translate');
   const arrow = document.getElementById('openTranslate');
   const close = document.getElementById('closeTranslate');
   translateDiv.style.right = '-8rem';
   arrow.style.display = 'block';
   close.style.display = 'none';
 }
-
 
 // check the language of the page
 function checkLanguage() {
@@ -300,6 +307,7 @@ function acceptCookies() {
 function checkCookies() {
   const cookies = localStorage.getItem('cookies');
   if (cookies) {
-    document.getElementById('cookies').style.display = 'none';
+    return true;
   }
+  return false;
 }

@@ -272,7 +272,7 @@ function translateToPortuguese() {
   document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Começar'));
 
   // Translate text in the clients section
-  document.getElementById('clients').getElementsByTagName('h1')[0].innerText = 'Quer ver nosso trabalho?';
+  document.getElementById('clients').getElementsByTagName('h1')[0].innerText = 'Quer ver o nosso trabalho?';
   document.querySelector('#clients p').innerText = 'Clientes que confiam na nossa experiência e no nosso trabalho';
 
   // Translate text in the FAQ section

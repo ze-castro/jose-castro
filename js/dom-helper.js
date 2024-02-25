@@ -33,7 +33,7 @@ window.onload = function () {
   );
   console.log('');
   console.log('%cLocal Storage', 'font-weight: bold; font-size: 0.8rem;');
-  console.log('We use local storage to store the user cookie preferences.');
+  console.log('We use local storage to store if the user has accepted the cookies, that way we do not show the cookies bar every time the user visits the website.');
   console.log('');
   console.log('We do not store any user data. Thank you for visiting our website!');
 };
@@ -251,7 +251,7 @@ function translateToPortuguese() {
   document.title = 'Sites Personalizados - Foco em Privacidade';
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
-    'Este site utiliza cookies para garantir que tenha a melhor experiência no nosso site.';
+    'Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.';
   document.getElementById('cookies').getElementsByTagName('button')[0].innerText = 'Entendi';
 
   // Translate text in the welcome section

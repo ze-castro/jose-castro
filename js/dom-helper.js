@@ -64,7 +64,7 @@ async function checkLocation() {
 
       // Check language
       if (country === 'PT') {
-        //translateToPortuguese();
+        translateToPortuguese();
       }
       if (country === 'ES') {
         translateToSpanish();

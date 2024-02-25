@@ -169,13 +169,13 @@ textarea:focus-visible {
 /* TRANSLATION BUTTONS */
 .translate {
   position: absolute;
-  width: 175px;
+  width: 225px;
   height: 55px;
   border-radius: 10px;
   padding-right: 1.5rem;
   background-color: var(--light-gray);
   top: 0;
-  right: -8rem;
+  right: -11.2rem;
   transform: translate(0, 0);
   display: flex;
   flex-direction: row;

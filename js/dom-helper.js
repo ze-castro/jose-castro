@@ -9,15 +9,13 @@ window.onload = function () {
     // if cookies accepted
     // ...
   }
-  // check the language of the page and translate text
-  checkLanguage();
 };
 
+//// TOOLS ////
 // expand faq boxes
 function toggleDescription(box) {
   box.classList.toggle('expanded');
 }
-
 // scroll to section
 function scrollToSection(sectionName) {
   var section = document.getElementById(sectionName);
@@ -29,7 +27,10 @@ function scrollToSection(sectionName) {
     behavior: 'smooth',
   });
 }
+// this year
+const thisYear = new Date().getFullYear();
 
+//// TEXT ////
 // click on "get started" button to write a description in textarea
 const textDescriptions = [
   'I need a website to promote my work',
@@ -37,7 +38,6 @@ const textDescriptions = [
   'I need to manage my business internally',
   'I need an bespoke online store for my business',
 ];
-
 function writeDescription(num) {
   document.getElementById('textarea').value = textDescriptions[num];
   scrollToSection('contact');
@@ -59,19 +59,81 @@ function closeTranslate() {
   const translateDiv = document.getElementById('translate');
   const arrow = document.getElementById('openTranslate');
   const close = document.getElementById('closeTranslate');
-  translateDiv.style.right = '-8rem';
+  translateDiv.style.right = '-11.2rem';
   arrow.style.display = 'block';
   close.style.display = 'none';
 }
 
-// check the language of the page
-function checkLanguage() {
-  const language = localStorage.getItem('language');
-  if (language === 'pt') {
-    translateToPortuguese();
-  } else if (language === 'es') {
-    translateToSpanish();
-  }
+// translate text to english
+function translateToEnglish() {
+  // change the language of the page
+  document.documentElement.lang = 'en';
+  localStorage.setItem('language', 'en');
+  closeTranslate();
+  // Translate text in the cookies div
+  document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
+    'This website uses cookies to ensure you get the best experience on our website.';
+  document.getElementById('cookies').getElementsByTagName('button')[0].innerText = 'Got it!';
+
+  // Translate text in the welcome section
+  document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
+    'Explore a world of endless possibilities.';
+  document.querySelector('#welcome p').innerText = 'Starting at ' + pricesUSD[0] + '$ per month';
+  document.querySelector('#welcome .links button').innerText = 'Contact';
+  document.querySelector('#welcome .links a').innerText = 'Learn more >';
+
+  // Translate text in the pricing section
+  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Get started';
+  document.querySelector('#pricing p').innerText = 'Pricing for everyone';
+  document.querySelectorAll('.card h2')[0].innerText = 'Professional Website';
+  document.querySelectorAll('.card ul li')[0].innerText =
+    'Straightforward website solution with essential features, including multiple pages, a custom domain, a professional email account, a contact form, an annual content update and ongoing email support.';
+  document.querySelectorAll('.card h2')[1].innerText = 'Wix Online Store';
+  document.querySelectorAll('.card ul li')[1].innerText =
+    "Launch your online store with confidence of Wix and embrace the tools you need for seamless growth and success. Customize every aspect of your store's design, add products and start selling.";
+  document.querySelectorAll('.card h2')[2].innerText = 'Business Management System';
+  document.querySelectorAll('.card ul li')[2].innerText =
+    'Upgrade your business with a user-friendly admin panel, commission monitoring, inventory management, project oversight, and automated reporting and analytics for enhanced efficiency.';
+  document.querySelectorAll('.card h2')[3].innerText = 'Custom Online Store';
+  document.querySelectorAll('.card ul li')[3].innerText =
+    "Kickstart your online store journey and unlock robust features to seamlessly oversee every facet of your business, whether you're just beginning or experiencing rapid growth.";
+  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = pricesUSD[i + 1] + '$ / month'));
+  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Get started'));
+
+  // Translate text in the clients section
+  document.getElementById('clients').getElementsByTagName('h1')[0].innerText = 'Want to see our work?';
+  document.querySelector('#clients p').innerText = 'Confident clients rely on our expertise and trust our work';
+
+  // Translate text in the FAQ section
+  document.getElementById('faq').getElementsByTagName('h1')[0].innerText = 'Frequently Asked Questions';
+  document.querySelector('#faq p').innerText = 'Here are some of the most common questions we get asked';
+  document.querySelectorAll('.box-title')[0].innerText = 'What is The Website Builder?';
+  document.querySelectorAll('.box-description')[0].innerText =
+    'The Website Builder is a company specialized in crafting personalized websites. With expertise in web development, our team creates stunning and tailored online platforms to meet your unique needs. From captivating designs to seamless functionality, we deliver top-notch websites that effectively represent your brand and engage your audience.';
+  document.querySelectorAll('.box-title')[1].innerText = 'Do you offer website maintenance services?';
+  document.querySelectorAll('.box-description')[1].innerText =
+    'Yes, we offer website maintenance in every package to ensure your website remains up-to-date, secure, and functioning optimally. Our maintenance services include regular backups, software updates, and technical support.';
+  document.querySelectorAll('.box-title')[2].innerText = 'Do you provide search engine optimization (SEO) services?';
+  document.querySelectorAll('.box-description')[2].innerText =
+    "Yes, we offer comprehensive SEO services to improve your website's visibility on search engines. Our strategies include keyword research, on-page optimization, backlink building, and content optimization to enhance your website's rankings.";
+  document.querySelectorAll('.box-title')[3].innerText =
+    'Can you integrate e-commerce functionality into my website?';
+  document.querySelectorAll('.box-description')[3].innerText =
+    'Absolutely! In our best package, we create a store-like website and integrate shopping cart systems, secure payment gateways, and inventory management solutions to enable smooth online transactions. If you have a lower budget, we got you covered with our Wix Online Store package.';
+  document.querySelectorAll('.box-title')[4].innerText = 'How long does it take to build a website?';
+  document.querySelectorAll('.box-description')[4].innerText =
+    'The timeframe for building a website depends on various factors such as project complexity and client requirements. Typically, our team works diligently to deliver a fully functional website within 2-8 weeks.';
+  document.querySelectorAll('.box-title')[5].innerText = 'What if I need assistance after my website is launched?';
+  document.querySelectorAll('.box-description')[5].innerText =
+    'We provide ongoing customer support even after your website is launched. Our dedicated support team is available to address any questions, concerns, or technical issues you may encounter, ensuring a seamless website experience.';
+  // Translate text in the contact section
+  document.getElementById('contact').getElementsByTagName('h1')[0].innerText = 'Any questions?';
+  document.querySelector('#contact p').innerText = 'Send us a message, and we will get back to you as soon as possible';
+  document.querySelector('#textarea').setAttribute('placeholder', 'Do you deliver hot dogs to Mars?');
+  document.querySelector('#contact button').innerText = 'Send';
+
+  // Translate text in the footer
+  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Built by ';
 }
 
 // translate text to portuguese
@@ -146,7 +208,7 @@ function translateToPortuguese() {
   document.querySelector('#contact button').innerText = 'Enviar';
 
   // Translate text in the footer
-  document.querySelector('footer p').innerText = '@2024 The Website Builder - Construído por ';
+  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construído por ';
 }
 
 // translate text to spanish
@@ -222,10 +284,24 @@ function translateToSpanish() {
   document.querySelector('#contact button').innerText = 'Enviar';
 
   // Translate text in the footer
-  document.querySelector('footer p').innerText = '@2024 The Website Builder - Construido por ';
+  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construido por ';
 }
 
 //// COOKIES ////
+// accept cookies
+function acceptCookies() {
+  localStorage.setItem('cookies', true);
+  document.getElementById('cookies').style.display = 'none';
+}
+
+// check if cookies have been accepted
+function checkCookies() {
+  const cookies = localStorage.getItem('cookies');
+  if (cookies) {
+    return true;
+  }
+  return false;
+}
 // function to get the user location
 function checkLocation() {
   fetch('https://ipapi.co/json/')
@@ -234,7 +310,7 @@ function checkLocation() {
       // Extract the country from the response
       const currency = data.currency;
 
-      // Check country
+      // Check currency
       if (currency === 'USD') {
         // USD customers
         adjustPricesForUSD();
@@ -242,12 +318,27 @@ function checkLocation() {
         // EUR customers
         adjustPricesForEUR();
       }
+
+      // Extract the country from the response
+      const country = data.country;
+
+      // Check language
+      if (country === 'PT') {
+        translateToPortuguese();
+      }
+      if (country === 'ES') {
+        translateToSpanish();
+      } else {
+        // default language
+        translateToEnglish();
+      }
     })
     .catch((error) => {
       console.error('Error fetching currency:', error);
     });
 }
 
+//// PRICES ////
 // EUR - prices
 const pricesEUR = [50, 50, 100, 300, 1000];
 const currencyEUR = '€';
@@ -255,13 +346,6 @@ const currencyEUR = '€';
 // USD - prices
 const pricesUSD = [100, 100, 250, 500, 2000];
 const currencyUSD = '$';
-
-// adjust prices for USD customers
-function adjustPricesForUSD() {
-  // get all prices
-  const prices = document.getElementsByClassName('prices');
-  const currencies = document.getElementsByClassName('currency');
-}
 
 // adjust prices for EUR customers
 function adjustPricesForEUR() {
@@ -295,19 +379,4 @@ function adjustPricesForUSD() {
     const price = prices[i];
     price.innerHTML = pricesUSD[i];
   }
-}
-
-// accept cookies
-function acceptCookies() {
-  localStorage.setItem('cookies', true);
-  document.getElementById('cookies').style.display = 'none';
-}
-
-// check if cookies have been accepted
-function checkCookies() {
-  const cookies = localStorage.getItem('cookies');
-  if (cookies) {
-    return true;
-  }
-  return false;
 }

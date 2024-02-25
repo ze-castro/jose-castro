@@ -1,3 +1,12 @@
+//// PRICES ////
+// EUR - prices
+let prices = [];
+const pricesEUR = [50, 50, 100, 300, 1000];
+const pricesUSD = [70, 70, 150, 400, 1300];
+let currency = '';
+const currencyEUR = '€';
+const currencyUSD = '$';
+
 // after the page is loaded
 window.onload = function () {
   // get user location and adjust prices
@@ -10,6 +19,79 @@ window.onload = function () {
     // ...
   }
 };
+
+//// COOKIES ////
+// function to get the user location
+async function checkLocation() {
+  // fetch the user location
+  await fetch('https://ipapi.co/json/')
+    .then((response) => response.json())
+    .then((data) => {
+      // Extract the country from the response
+      const coin = data.currency;
+
+      // Check currency
+      if (coin === 'USD') {
+        // USD customers
+        prices = pricesUSD;
+        currency = currencyUSD;
+      } else {
+        // EUR customers
+        prices = pricesEUR;
+        currency = currencyEUR;
+      }
+
+      // Extract the country from the response
+      const country = data.country;
+
+      // Check language
+      if (country === 'PT') {
+        translateToPortuguese();
+      }
+      if (country === 'ES') {
+        translateToSpanish();
+      } else {
+        // default language
+        translateToEnglish();
+      }
+    })
+    .catch((error) => {
+      console.error('Error fetching currency:', error);
+      // in case of error, get all the prices and currency elements
+      let pricesElements = document.querySelectorAll('.prices');
+      let currencyElements = document.querySelectorAll('.currency');
+      // change the prices and currency
+      pricesElements.forEach((price, i) => (price.innerText = pricesEUR[i]));
+      currencyElements.forEach((coin) => (coin.innerText = currencyEUR));
+    });
+
+  // hide the loading div
+  const loading = document.getElementById('loading');
+  loading.style.top = '-100vh';
+  setTimeout(() => {
+    loading.style.display = 'none';
+  }, 1000);
+
+  // show cookies div
+  const cookies = document.getElementById('cookies');
+  setTimeout(() => {
+    cookies.style.bottom = '2rem';
+  }, 1000);
+}
+// accept cookies
+function acceptCookies() {
+  localStorage.setItem('cookies', true);
+  document.getElementById('cookies').style.display = 'none';
+}
+
+// check if cookies have been accepted
+function checkCookies() {
+  const cookies = localStorage.getItem('cookies');
+  if (cookies) {
+    return true;
+  }
+  return false;
+}
 
 //// TOOLS ////
 // expand faq boxes
@@ -68,7 +150,6 @@ function closeTranslate() {
 function translateToEnglish() {
   // change the language of the page
   document.documentElement.lang = 'en';
-  localStorage.setItem('language', 'en');
   closeTranslate();
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
@@ -78,12 +159,12 @@ function translateToEnglish() {
   // Translate text in the welcome section
   document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
     'Explore a world of endless possibilities.';
-  document.querySelector('#welcome p').innerText = 'Starting at ' + pricesUSD[0] + '$ per month';
+  document.querySelector('#welcome p').innerText = 'Starting at ' + prices[0] + currency + ' per month';
   document.querySelector('#welcome .links button').innerText = 'Contact';
   document.querySelector('#welcome .links a').innerText = 'Learn more >';
 
   // Translate text in the pricing section
-  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Get started';
+  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Get Started';
   document.querySelector('#pricing p').innerText = 'Pricing for everyone';
   document.querySelectorAll('.card h2')[0].innerText = 'Professional Website';
   document.querySelectorAll('.card ul li')[0].innerText =
@@ -97,7 +178,7 @@ function translateToEnglish() {
   document.querySelectorAll('.card h2')[3].innerText = 'Custom Online Store';
   document.querySelectorAll('.card ul li')[3].innerText =
     "Kickstart your online store journey and unlock robust features to seamlessly oversee every facet of your business, whether you're just beginning or experiencing rapid growth.";
-  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = pricesUSD[i + 1] + '$ / month'));
+  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / month'));
   document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Get started'));
 
   // Translate text in the clients section
@@ -116,8 +197,7 @@ function translateToEnglish() {
   document.querySelectorAll('.box-title')[2].innerText = 'Do you provide search engine optimization (SEO) services?';
   document.querySelectorAll('.box-description')[2].innerText =
     "Yes, we offer comprehensive SEO services to improve your website's visibility on search engines. Our strategies include keyword research, on-page optimization, backlink building, and content optimization to enhance your website's rankings.";
-  document.querySelectorAll('.box-title')[3].innerText =
-    'Can you integrate e-commerce functionality into my website?';
+  document.querySelectorAll('.box-title')[3].innerText = 'Can you integrate e-commerce functionality into my website?';
   document.querySelectorAll('.box-description')[3].innerText =
     'Absolutely! In our best package, we create a store-like website and integrate shopping cart systems, secure payment gateways, and inventory management solutions to enable smooth online transactions. If you have a lower budget, we got you covered with our Wix Online Store package.';
   document.querySelectorAll('.box-title')[4].innerText = 'How long does it take to build a website?';
@@ -140,7 +220,6 @@ function translateToEnglish() {
 function translateToPortuguese() {
   // change the language of the page
   document.documentElement.lang = 'pt';
-  localStorage.setItem('language', 'pt');
   closeTranslate();
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
@@ -150,12 +229,12 @@ function translateToPortuguese() {
   // Translate text in the welcome section
   document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
     'Explore um mundo de possibilidades infinitas.';
-  document.querySelector('#welcome p').innerText = 'A partir de ' + pricesEUR[0] + '€ por mês';
+  document.querySelector('#welcome p').innerText = 'A partir de ' + prices[0] + currency + ' por mês';
   document.querySelector('#welcome .links button').innerText = 'Contato';
   document.querySelector('#welcome .links a').innerText = 'Saiba mais >';
 
   // Translate text in the pricing section
-  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comece agora';
+  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comece Agora';
   document.querySelector('#pricing p').innerText = 'Preços para todos os projetos';
   document.querySelectorAll('.card h2')[0].innerText = 'Website Profissional';
   document.querySelectorAll('.card ul li')[0].innerText =
@@ -169,7 +248,7 @@ function translateToPortuguese() {
   document.querySelectorAll('.card h2')[3].innerText = 'Loja Online Personalizada';
   document.querySelectorAll('.card ul li')[3].innerText =
     'A loja online que sempre sonhou. Contruída à medida do seu negócio, com todas as funcionalidades que precisa para vender online.';
-  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = pricesEUR[i + 1] + '€ / mês'));
+  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / mês'));
   document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Começar'));
 
   // Translate text in the clients section
@@ -215,7 +294,6 @@ function translateToPortuguese() {
 function translateToSpanish() {
   // change the language of the page
   document.documentElement.lang = 'es';
-  localStorage.setItem('language', 'es');
   closeTranslate();
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
@@ -225,12 +303,12 @@ function translateToSpanish() {
   // Translate text in the welcome section
   document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
     'Explora un mundo de posibilidades infinitas.';
-  document.querySelector('#welcome p').innerText = 'A partir de ' + pricesEUR[0] + '€ por mes';
+  document.querySelector('#welcome p').innerText = 'A partir de ' + prices[0] + currency + ' por mes';
   document.querySelector('#welcome .links button').innerText = 'Contacto';
   document.querySelector('#welcome .links a').innerText = 'Más información >';
 
   // Translate text in the pricing section
-  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comienza ahora';
+  document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comienza Ahora';
   document.querySelector('#pricing p').innerText = 'Precios para todos los proyectos';
   document.querySelectorAll('.card h2')[0].innerText = 'Sitio Web Profesional';
   document.querySelectorAll('.card ul li')[0].innerText =
@@ -244,7 +322,7 @@ function translateToSpanish() {
   document.querySelectorAll('.card h2')[3].innerText = 'Tienda Online Personalizada';
   document.querySelectorAll('.card ul li')[3].innerText =
     'La tienda online que siempre soñaste. Construida a medida de tu negocio, con todas las funcionalidades que necesitas para vender online.';
-  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = pricesEUR[i + 1] + '€ / mes'));
+  document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / mes'));
   document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Comenzar'));
 
   // Translate text in the clients section
@@ -285,98 +363,4 @@ function translateToSpanish() {
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construido por José Castro';
-}
-
-//// COOKIES ////
-// accept cookies
-function acceptCookies() {
-  localStorage.setItem('cookies', true);
-  document.getElementById('cookies').style.display = 'none';
-}
-
-// check if cookies have been accepted
-function checkCookies() {
-  const cookies = localStorage.getItem('cookies');
-  if (cookies) {
-    return true;
-  }
-  return false;
-}
-// function to get the user location
-function checkLocation() {
-  fetch('https://ipapi.co/json/')
-    .then((response) => response.json())
-    .then((data) => {
-      // Extract the country from the response
-      const currency = data.currency;
-
-      // Check currency
-      if (currency === 'USD') {
-        // USD customers
-        adjustPricesForUSD();
-      } else {
-        // EUR customers
-        adjustPricesForEUR();
-      }
-
-      // Extract the country from the response
-      const country = data.country;
-
-      // Check language
-      if (country === 'PT') {
-        translateToPortuguese();
-      }
-      if (country === 'ES') {
-        translateToSpanish();
-      } else {
-        // default language
-        translateToEnglish();
-      }
-    })
-    .catch((error) => {
-      console.error('Error fetching currency:', error);
-    });
-}
-
-//// PRICES ////
-// EUR - prices
-const pricesEUR = [50, 50, 100, 300, 1000];
-const currencyEUR = '€';
-
-// USD - prices
-const pricesUSD = [100, 100, 250, 500, 2000];
-const currencyUSD = '$';
-
-// adjust prices for EUR customers
-function adjustPricesForEUR() {
-  // get all prices
-  const prices = document.getElementsByClassName('prices');
-  const currencies = document.getElementsByClassName('currency');
-
-  // loop through prices
-  for (let i = 0; i < prices.length; i++) {
-    // change the currency to EUR
-    currencies[i].innerHTML = currencyEUR;
-
-    // change the price value
-    const price = prices[i];
-    price.innerHTML = pricesEUR[i];
-  }
-}
-
-// adjust prices for USD customers
-function adjustPricesForUSD() {
-  // get all prices
-  const prices = document.getElementsByClassName('prices');
-  const currencies = document.getElementsByClassName('currency');
-
-  // loop through prices
-  for (let i = 0; i < prices.length; i++) {
-    // change the currency to USD
-    currencies[i].innerHTML = currencyUSD;
-
-    // change the price value
-    const price = prices[i];
-    price.innerHTML = pricesUSD[i];
-  }
 }

@@ -275,7 +275,7 @@ function translateToPortuguese() {
     'Um painel de administração com monitoração de comissões, gestão de stock, supervisão de projetos, relatórios automatizados e análises para uma eficiência aprimorada.';
   document.querySelectorAll('.card h2')[3].innerText = 'Loja Online Personalizada';
   document.querySelectorAll('.card ul li')[3].innerText =
-    'A loja online que sempre sonhou. Contruída à medida do seu negócio, com todas as funcionalidades que precisa para vender online.';
+    'A loja online que sempre sonhou. Construída à medida do seu negócio, com todas as funcionalidades que precisa para vender online.';
   document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / mês'));
   document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Começar'));
 

@@ -28,7 +28,9 @@ window.onload = function () {
   console.log('');
   console.log('%cIpapi.co', 'font-weight: bold; font-size: 0.8rem;');
   console.log('https://ipapi.co/api/');
-  console.log('We use Ipapi.co to get the user location and translate the website to the user language. We also adjust the prices to the US users because we are based in Portugal and services there are more expensive for us.');
+  console.log(
+    'We use Ipapi.co to get the user location and translate the website to the user language. We also adjust the prices to the US users because we are based in Portugal and services there are more expensive for us.'
+  );
   console.log('');
   console.log('%cLocal Storage', 'font-weight: bold; font-size: 0.8rem;');
   console.log('We use local storage to store the user cookie preferences.');
@@ -62,7 +64,7 @@ async function checkLocation() {
 
       // Check language
       if (country === 'PT') {
-        translateToPortuguese();
+        //translateToPortuguese();
       }
       if (country === 'ES') {
         translateToSpanish();
@@ -171,7 +173,8 @@ function closeTranslate() {
 function translateToEnglish() {
   // change the language of the page
   document.documentElement.lang = 'en';
-  closeTranslate();
+  // Translate text in the title
+  document.title = 'Custom Websites - Focus on Privacy & Performance';
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
     'This website uses cookies to ensure you get the best experience on our website.';
@@ -179,7 +182,7 @@ function translateToEnglish() {
 
   // Translate text in the welcome section
   document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
-    'Explore a world of endless possibilities.';
+    'Privacy first, high-performance custom websites';
   document.querySelector('#welcome p').innerText = 'Starting at ' + prices[0] + currency + ' per month';
   document.querySelector('#welcome .links button').innerText = 'Contact';
   document.querySelector('#welcome .links a').innerText = 'Learn more >';
@@ -235,28 +238,33 @@ function translateToEnglish() {
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Made by José Castro';
+
+  // hide the language modal
+  closeTranslate();
 }
 
 // translate text to portuguese
 function translateToPortuguese() {
   // change the language of the page
   document.documentElement.lang = 'pt';
+  // Translate text in the title
+  document.title = 'Sites Personalizados - Foco em Privacidade';
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
     'Este site utiliza cookies para garantir que tenha a melhor experiência no nosso site.';
-  document.getElementById('cookies').getElementsByTagName('button')[0].innerText = 'Entendi!';
+  document.getElementById('cookies').getElementsByTagName('button')[0].innerText = 'Entendi';
 
   // Translate text in the welcome section
   document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
-    'Explore um mundo de possibilidades infinitas.';
+    'Sites para a sua empresa com foco na privacidade';
   document.querySelector('#welcome p').innerText = 'A partir de ' + prices[0] + currency + ' por mês';
-  document.querySelector('#welcome .links button').innerText = 'Contato';
+  document.querySelector('#welcome .links button').innerText = 'Contacto';
   document.querySelector('#welcome .links a').innerText = 'Saiba mais >';
 
   // Translate text in the pricing section
   document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comece Agora';
-  document.querySelector('#pricing p').innerText = 'Preços para todos os projetos';
-  document.querySelectorAll('.card h2')[0].innerText = 'Website Profissional';
+  document.querySelector('#pricing p').innerText = 'Preços para todas as empresas';
+  document.querySelectorAll('.card h2')[0].innerText = 'Site Profissional';
   document.querySelectorAll('.card ul li')[0].innerText =
     'O essencial para divulgar o seu negócio na internet, incluindo várias páginas, um domínio personalizado, uma conta de email profissional, um formulário de contacto, uma atualização de conteúdo anual e suporte por email contínuo.';
   document.querySelectorAll('.card h2')[1].innerText = 'Loja Online Wix';
@@ -280,12 +288,12 @@ function translateToPortuguese() {
   document.querySelector('#faq p').innerText = 'Algumas das perguntas mais comuns que recebemos';
   document.querySelectorAll('.box-title')[0].innerText = 'O que é o The Website Builder?';
   document.querySelectorAll('.box-description')[0].innerText =
-    'O The Website Builder é uma empresa de desenvolvimento web que oferece serviços de criação de sites, lojas online e sistemas de gestão empresarial. Com uma equipa de especialistas em design e desenvolvimento, estamos prontos para ajudar a levar o seu negócio para o próximo nível.';
+    'O The Website Builder é uma empresa de desenvolvimento web que oferece serviços de criação de sites, lojas online e sistemas de gestão empresarial. Com o nosso foco em privacidade e performance, estamos prontos para ajudar a levar o seu negócio para o próximo nível.';
   document.querySelectorAll('.box-title')[1].innerText = 'Oferecem serviços de manutenção de sites?';
   document.querySelectorAll('.box-description')[1].innerText =
-    'Sim, oferecemos manutenção de websites em todos os pacotes para garantir que seu website permaneça atualizado, seguro e a funcionar de forma correta. Os nossos serviços de manutenção incluem backups regulares, atualizações de software e suporte técnico.';
+    'Sim, oferecemos manutenção de sites em todos os pacotes para garantir que seu site permaneça atualizado, seguro e a funcionar de forma correta. Os nossos serviços de manutenção incluem backups regulares, atualizações de software e suporte técnico.';
   document.querySelectorAll('.box-title')[2].innerText =
-    'Fornecem serviços de otimização para motores de pesquisa (SEO)?';
+    'Fornecem serviços de otimização de pesquisa (SEO)?';
   document.querySelectorAll('.box-description')[2].innerText =
     'Sim, oferecemos serviços abrangentes de SEO para melhorar a visibilidade do seu site nos motores de pesquisa. As nossas estratégias incluem pesquisa por palavras-chave, otimização on-page, construção de backlinks e otimização de conteúdo para melhorar o ranking do seu site.';
   document.querySelectorAll('.box-title')[3].innerText = 'Podem integrar funcionalidades de e-commerce ao meu site?';
@@ -293,7 +301,7 @@ function translateToPortuguese() {
     'Com certeza! No nosso melhor pacote, criamos uma loja online e integramos sistemas de carrinho de compras, gateways de pagamento seguros e soluções de gestão de inventário para facilitar transações online sem problemas. Se tem um orçamento mais baixo, também oferecemos nosso pacote Loja Online Wix para atender às suas necessidades.';
   document.querySelectorAll('.box-title')[4].innerText = 'Quanto tempo leva para construir um site?';
   document.querySelectorAll('.box-description')[4].innerText =
-    'O tempo de construção do site depende do tamanho e da complexidade do projeto. No entanto, a maioria dos sites podem ser concluídos entre 2-6 semanas. Para projetos mais complexos, o tempo de construção pode ser maior.';
+    'O tempo de construção do site depende do tamanho e da complexidade do projeto. No entanto, a maioria dos sites podem ser concluídos entre 1-6 semanas. Para projetos mais complexos, o tempo de construção pode ser maior.';
   document.querySelectorAll('.box-title')[5].innerText =
     'E se eu precisar de assistência depois do meu site ser lançado?';
   document.querySelectorAll('.box-description')[5].innerText =
@@ -302,7 +310,7 @@ function translateToPortuguese() {
   // Translate text in the contact section
   document.getElementById('contact').getElementsByTagName('h1')[0].innerText = 'Tem dúvidas?';
   document.querySelector('#contact p').innerText =
-    'Envie-nos uma mensagem e entraremos em contato o mais breve possível';
+    'Envia-nos uma mensagem e entraremos em contato o mais breve possível';
   document.querySelector('#textarea').setAttribute('placeholder', 'Entregam cachorros-quentes em Marte?');
   document.querySelector('#contact button').innerText = 'Enviar';
 
@@ -317,15 +325,18 @@ function translateToPortuguese() {
 function translateToSpanish() {
   // change the language of the page
   document.documentElement.lang = 'es';
-  closeTranslate();
+
+  // Translate text in the title
+  document.title = 'Sitios web personalizados - Enfoque en Privacidad';
+
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
     'Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.';
-  document.getElementById('cookies').getElementsByTagName('button')[0].innerText = '¡Entendido!';
+  document.getElementById('cookies').getElementsByTagName('button')[0].innerText = 'Entendido';
 
   // Translate text in the welcome section
   document.getElementById('welcome').getElementsByTagName('h1')[0].innerText =
-    'Explora un mundo de posibilidades infinitas.';
+    'Websites para tu empresa con enfoque en privacidad';
   document.querySelector('#welcome p').innerText = 'A partir de ' + prices[0] + currency + ' por mes';
   document.querySelector('#welcome .links button').innerText = 'Contacto';
   document.querySelector('#welcome .links a').innerText = 'Más información >';
@@ -386,4 +397,7 @@ function translateToSpanish() {
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construido por José Castro';
+
+  // hide the language modal
+  closeTranslate();
 }

@@ -18,6 +18,22 @@ window.onload = function () {
     // if cookies accepted
     // ...
   }
+
+  // detail the cookies we use in the website
+  console.log('%cCookies we use:', 'font-weight: bold; font-size: 1rem;');
+  console.log('');
+  console.log('%cGoogle Analytics', 'font-weight: bold; font-size: 0.8rem;');
+  console.log('https://policies.google.com/privacy');
+  console.log('We use Google Analytics to track the number of visitors of our website.');
+  console.log('');
+  console.log('%cIpapi.co', 'font-weight: bold; font-size: 0.8rem;');
+  console.log('https://ipapi.co/api/');
+  console.log('We use Ipapi.co to get the user location and translate the website to the user language. We also adjust the prices to the US users because we are based in Portugal and services there are more expensive for us.');
+  console.log('');
+  console.log('%cLocal Storage', 'font-weight: bold; font-size: 0.8rem;');
+  console.log('We use local storage to store the user cookie preferences.');
+  console.log('');
+  console.log('We do not store any user data. Thank you for visiting our website!');
 };
 
 //// COOKIES ////
@@ -50,7 +66,8 @@ async function checkLocation() {
       }
       if (country === 'ES') {
         translateToSpanish();
-      } else {
+      }
+      if (country !== 'PT' && country !== 'ES') {
         // default language
         translateToEnglish();
       }
@@ -81,7 +98,11 @@ async function checkLocation() {
 // accept cookies
 function acceptCookies() {
   localStorage.setItem('cookies', true);
-  document.getElementById('cookies').style.display = 'none';
+  const cookies = document.getElementById('cookies');
+  cookies.style.bottom = '-5rem';
+  setTimeout(() => {
+    cookies.style.display = 'none';
+  }, 500);
 }
 
 // check if cookies have been accepted
@@ -220,7 +241,6 @@ function translateToEnglish() {
 function translateToPortuguese() {
   // change the language of the page
   document.documentElement.lang = 'pt';
-  closeTranslate();
   // Translate text in the cookies div
   document.getElementById('cookies').getElementsByTagName('p')[0].innerText =
     'Este site utiliza cookies para garantir que tenha a melhor experiência no nosso site.';
@@ -288,6 +308,9 @@ function translateToPortuguese() {
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construído por José Castro';
+
+  // hide the language modal
+  closeTranslate();
 }
 
 // translate text to spanish

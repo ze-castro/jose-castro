@@ -717,49 +717,6 @@ footer p {
   color: var(--white);
 }
 
-footer a {
-  font-weight: var(--font-weight-bold);
-  color: var(--blue) !important;
-  text-decoration: none;
-}
-
-footer a:hover {
-  animation: Color 1s linear infinite;
-  color: var(--white) !important;
-}
-
-@keyframes Color {
-  0% {
-    color: #dacff8;
-    text-shadow: 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec;
-  }
-
-  20% {
-    color: #a6e2f8;
-    text-shadow: 0 0 3px #4fc1e9, 0 0 3px #4fc1e9, 0 0 3px #4fc1e9, 0 0 3px #4fc1e9;
-  }
-
-  40% {
-    color: #fce4a6;
-    text-shadow: 0 0 3px #ffce54, 0 0 3px #ffce54, 0 0 3px #ffce54, 0 0 3px #ffce54;
-  }
-
-  60% {
-    color: #fcbeb2;
-    text-shadow: 0 0 3px #fc6e51, 0 0 3px #fc6e51, 0 0 3px #fc6e51, 0 0 3px #fc6e51;
-  }
-
-  80% {
-    color: #fcbac1;
-    text-shadow: 0 0 3px #ed5565, 0 0 3px #ed5565, 0 0 3px #ed5565, 0 0 3px #ed5565;
-  }
-
-  100% {
-    color: #dacff8;
-    text-shadow: 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec, 0 0 3px #ac92ec;
-  }
-}
-
 /* MEDIA QUERIES */
 
 @media (width < 1200px) {
@@ -957,9 +914,6 @@ footer a:hover {
   footer p {
     font-size: 1rem;
   }
-  footer a {
-    font-size: 1rem;
-  }
 }
 
 @media (width < 600px) {
@@ -978,9 +932,6 @@ footer a:hover {
     display: none;
   }
   footer p {
-    font-size: 0.7rem;
-  }
-  footer a {
     font-size: 0.7rem;
   }
 }

@@ -133,7 +133,7 @@ function translateToEnglish() {
   document.querySelector('#contact button').innerText = 'Send';
 
   // Translate text in the footer
-  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Built by ';
+  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Made by José Castro';
 }
 
 // translate text to portuguese
@@ -208,7 +208,7 @@ function translateToPortuguese() {
   document.querySelector('#contact button').innerText = 'Enviar';
 
   // Translate text in the footer
-  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construído por ';
+  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construído por José Castro';
 }
 
 // translate text to spanish
@@ -284,7 +284,7 @@ function translateToSpanish() {
   document.querySelector('#contact button').innerText = 'Enviar';
 
   // Translate text in the footer
-  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construido por ';
+  document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construido por José Castro';
 }
 
 //// COOKIES ////

@@ -194,7 +194,7 @@ function translateToEnglish() {
   document.querySelector('#pricing p').innerText = 'Pricing for everyone';
   document.querySelectorAll('.card h2')[0].innerText = 'Digital Menu';
   document.querySelectorAll('.card ul li')[0].innerText =
-    'By scanning a QR code, customers can view your restaurant, café, or bar menu on their smartphone. Includes an annual content update and ongoing email support.';
+    'By scanning a QR code, customers can view your restaurant, café, or bar menu on their smartphone. Includes an annual content update and ongoing support.';
   document.querySelectorAll('.card h2')[1].innerText = 'Professional Website';
   document.querySelectorAll('.card ul li')[1].innerText =
     'Straightforward website solution with essential features, including multiple pages, a custom domain, a professional email account, a contact form, an annual content update and ongoing email support.';
@@ -268,7 +268,7 @@ function translateToPortuguese() {
   document.querySelector('#pricing p').innerText = 'Preços para todas as empresas';
   document.querySelectorAll('.card h2')[0].innerText = 'Menu Digital';
   document.querySelectorAll('.card ul li')[0].innerText =
-    'Através de um código QR, os clientes podem visualizar o menu do seu restaurante, café ou bar, no smartphone. Inclui atualização de conteúdo anual e suporte por email contínuo.';
+    'Através de um código QR, os clientes podem visualizar o menu do seu restaurante, café ou bar, no smartphone. Inclui atualização de conteúdo anual e suporte contínuo.';
   document.querySelectorAll('.card h2')[1].innerText = 'Site Profissional';
   document.querySelectorAll('.card ul li')[1].innerText =
     'O essencial para divulgar o seu negócio na internet, incluindo várias páginas, um domínio personalizado, uma conta de email profissional, um formulário de contacto, uma atualização de conteúdo anual e suporte por email contínuo.';
@@ -347,7 +347,7 @@ function translateToSpanish() {
   document.querySelector('#pricing p').innerText = 'Precios para todos los proyectos';
   document.querySelectorAll('.card h2')[0].innerText = 'Menú Digital';
   document.querySelectorAll('.card ul li')[0].innerText =
-    'Al escanear un código QR, los clientes pueden ver el menú de su restaurante, cafetería o bar en su teléfono inteligente. Incluye una actualización de contenido anual y soporte continuo por correo electrónico.';
+    'Al escanear un código QR, los clientes pueden ver el menú de su restaurante, cafetería o bar en su teléfono inteligente. Incluye una actualización de contenido anual y soporte continuo.';
   document.querySelectorAll('.card h2')[1].innerText = 'Sitio Web Profesional';
   document.querySelectorAll('.card ul li')[1].innerText =
     'Lo esencial para promocionar su negocio, incluyendo varias páginas, un dominio personalizado, una cuenta de correo electrónico profesional, un formulario de contacto, una actualización de contenido anual y soporte continuo por correo.';

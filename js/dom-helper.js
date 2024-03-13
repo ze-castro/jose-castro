@@ -1,8 +1,8 @@
 //// PRICES ////
 // EUR - prices
 let prices = [];
-const pricesEUR = [50, 50, 100, 300, 1000];
-const pricesUSD = [70, 70, 150, 400, 1300];
+const pricesEUR = [49, 9, 49, 299, 449];
+const pricesUSD = [69, 19, 69, 399, 699];
 let currency = '';
 const currencyEUR = '€';
 const currencyUSD = '$';
@@ -17,6 +17,12 @@ window.onload = function () {
     document.getElementById('cookies').style.display = 'none';
     // if cookies accepted
     // ...
+  } else {
+    // show cookies div
+    const cookies = document.getElementById('cookies');
+    setTimeout(() => {
+      cookies.style.bottom = '2rem';
+    }, 1000);
   }
 
   // detail the cookies we use in the website
@@ -33,7 +39,9 @@ window.onload = function () {
   );
   console.log('');
   console.log('%cLocal Storage', 'font-weight: bold; font-size: 0.8rem;');
-  console.log('We use local storage to store if the user has accepted the cookies, that way we do not show the cookies bar every time the user visits the website.');
+  console.log(
+    'We use local storage to store if the user has accepted the cookies, that way we do not show the cookies bar every time the user visits the website.'
+  );
   console.log('');
   console.log('We do not store any user data. Thank you for visiting our website!');
 };
@@ -89,12 +97,6 @@ async function checkLocation() {
   loading.style.top = '-100vh';
   setTimeout(() => {
     loading.style.display = 'none';
-  }, 1000);
-
-  // show cookies div
-  const cookies = document.getElementById('cookies');
-  setTimeout(() => {
-    cookies.style.bottom = '2rem';
   }, 1000);
 }
 // accept cookies
@@ -190,12 +192,12 @@ function translateToEnglish() {
   // Translate text in the pricing section
   document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Get Started';
   document.querySelector('#pricing p').innerText = 'Pricing for everyone';
-  document.querySelectorAll('.card h2')[0].innerText = 'Professional Website';
+  document.querySelectorAll('.card h2')[0].innerText = 'Digital Menu';
   document.querySelectorAll('.card ul li')[0].innerText =
-    'Straightforward website solution with essential features, including multiple pages, a custom domain, a professional email account, a contact form, an annual content update and ongoing email support.';
-  document.querySelectorAll('.card h2')[1].innerText = 'Wix Online Store';
+    'By scanning a QR code, customers can view your restaurant, café, or bar menu on their smartphone. Includes an annual content update and ongoing email support.';
+  document.querySelectorAll('.card h2')[1].innerText = 'Professional Website';
   document.querySelectorAll('.card ul li')[1].innerText =
-    "Launch your online store with confidence of Wix and embrace the tools you need for seamless growth and success. Customize every aspect of your store's design, add products and start selling.";
+    'Straightforward website solution with essential features, including multiple pages, a custom domain, a professional email account, a contact form, an annual content update and ongoing email support.';
   document.querySelectorAll('.card h2')[2].innerText = 'Business Management System';
   document.querySelectorAll('.card ul li')[2].innerText =
     'Upgrade your business with a user-friendly admin panel, commission monitoring, inventory management, project oversight, and automated reporting and analytics for enhanced efficiency.';
@@ -264,12 +266,12 @@ function translateToPortuguese() {
   // Translate text in the pricing section
   document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comece Agora';
   document.querySelector('#pricing p').innerText = 'Preços para todas as empresas';
-  document.querySelectorAll('.card h2')[0].innerText = 'Site Profissional';
+  document.querySelectorAll('.card h2')[0].innerText = 'Menu Digital';
   document.querySelectorAll('.card ul li')[0].innerText =
-    'O essencial para divulgar o seu negócio na internet, incluindo várias páginas, um domínio personalizado, uma conta de email profissional, um formulário de contacto, uma atualização de conteúdo anual e suporte por email contínuo.';
-  document.querySelectorAll('.card h2')[1].innerText = 'Loja Online Wix';
+    'Através de um código QR, os clientes podem visualizar o menu do seu restaurante, café ou bar, no smartphone. Inclui atualização de conteúdo anual e suporte por email contínuo.';
+  document.querySelectorAll('.card h2')[1].innerText = 'Site Profissional';
   document.querySelectorAll('.card ul li')[1].innerText =
-    'Lance sua loja online com a confiança da Wix e acolha as ferramentas que precisa para o crescimento e sucesso do seu negócio. Personalize todos os aspectos da sua loja, adicione produtos e comece a vender.';
+    'O essencial para divulgar o seu negócio na internet, incluindo várias páginas, um domínio personalizado, uma conta de email profissional, um formulário de contacto, uma atualização de conteúdo anual e suporte por email contínuo.';
   document.querySelectorAll('.card h2')[2].innerText = 'Sistema de Gestão Empresarial';
   document.querySelectorAll('.card ul li')[2].innerText =
     'Um painel de administração com monitoração de comissões, gestão de stock, supervisão de projetos, relatórios automatizados e análises para uma eficiência aprimorada.';
@@ -292,8 +294,7 @@ function translateToPortuguese() {
   document.querySelectorAll('.box-title')[1].innerText = 'Oferecem serviços de manutenção de sites?';
   document.querySelectorAll('.box-description')[1].innerText =
     'Sim, oferecemos manutenção de sites em todos os pacotes para garantir que seu site permaneça atualizado, seguro e a funcionar de forma correta. Os nossos serviços de manutenção incluem backups regulares, atualizações de software e suporte técnico.';
-  document.querySelectorAll('.box-title')[2].innerText =
-    'Fornecem serviços de otimização de pesquisa (SEO)?';
+  document.querySelectorAll('.box-title')[2].innerText = 'Fornecem serviços de otimização de pesquisa (SEO)?';
   document.querySelectorAll('.box-description')[2].innerText =
     'Sim, oferecemos serviços abrangentes de SEO para melhorar a visibilidade do seu site nos motores de pesquisa. As nossas estratégias incluem pesquisa por palavras-chave, otimização on-page, construção de backlinks e otimização de conteúdo para melhorar o ranking do seu site.';
   document.querySelectorAll('.box-title')[3].innerText = 'Podem integrar funcionalidades de e-commerce ao meu site?';
@@ -344,12 +345,12 @@ function translateToSpanish() {
   // Translate text in the pricing section
   document.getElementById('pricing').getElementsByTagName('h1')[0].innerText = 'Comienza Ahora';
   document.querySelector('#pricing p').innerText = 'Precios para todos los proyectos';
-  document.querySelectorAll('.card h2')[0].innerText = 'Sitio Web Profesional';
+  document.querySelectorAll('.card h2')[0].innerText = 'Menú Digital';
   document.querySelectorAll('.card ul li')[0].innerText =
-    'Lo esencial para promocionar su negocio, incluyendo varias páginas, un dominio personalizado, una cuenta de correo electrónico profesional, un formulario de contacto, una actualización de contenido anual y soporte continuo por correo.';
-  document.querySelectorAll('.card h2')[1].innerText = 'Tienda Online Wix';
+    'Al escanear un código QR, los clientes pueden ver el menú de su restaurante, cafetería o bar en su teléfono inteligente. Incluye una actualización de contenido anual y soporte continuo por correo electrónico.';
+  document.querySelectorAll('.card h2')[1].innerText = 'Sitio Web Profesional';
   document.querySelectorAll('.card ul li')[1].innerText =
-    'Lanza tu tienda online con la confianza de Wix y acoge las herramientas que necesitas para el crecimiento y éxito de tu negocio. Personaliza todos los aspectos de tu tienda, añade productos y comienza a vender.';
+    'Lo esencial para promocionar su negocio, incluyendo varias páginas, un dominio personalizado, una cuenta de correo electrónico profesional, un formulario de contacto, una actualización de contenido anual y soporte continuo por correo.';
   document.querySelectorAll('.card h2')[2].innerText = 'Sistema de Gestión Empresarial';
   document.querySelectorAll('.card ul li')[2].innerText =
     'Un panel de administración con monitorización de comisiones, gestión de stock, supervisión de proyectos, informes automatizados y análisis para una eficiencia mejorada.';

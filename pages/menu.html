@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="../styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/menu.css" />
-    <!-- scripts -->
-    <script src="../js/dom-helper.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP68S7WD0X"></script>
     <script>
@@ -33,6 +31,10 @@
 
       gtag('config', 'G-CP68S7WD0X');
     </script>
+    <!-- scripts -->
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/cookies.js"></script>
+    <script type="module" src="../js/dom-helper.js"></script>
   </head>
   <body>
     <div id="loading">
@@ -46,22 +48,22 @@
       </div>
       <div id="cookies">
         <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
-        <button onclick="acceptCookies()">Entendi</button>
+        <button>Entendi</button>
       </div>
       <div class="translate" id="translate">
-        <i class="fa fa-close" id="closeTranslate" onclick="closeTranslate()"></i>
-        <i class="fa fa-flag" id="openTranslate" onclick="openTranslate()"></i>
-        <img src="../assets/usa.webp" alt="english" onclick="translateToEnglishMenu()" />
-        <img src="../assets/portugal.webp" alt="portuguese" onclick="translateToPortugueseMenu()" />
-        <img src="../assets/spain.webp" alt="spanish" onclick="translateToSpanishMenu()" />
+        <i class="fa fa-close" id="closeTranslate"></i>
+        <i class="fa fa-flag" id="openTranslate"></i>
+        <img src="../assets/usa.webp" alt="english" id="menu-english"/>
+        <img src="../assets/portugal.webp" alt="portuguese" id="menu-portuguese"/>
+        <img src="../assets/spain.webp" alt="spanish" id="menu-spanish"/>
       </div>
-      <div class="menu-navbar">
+      <div id="menu-navbar">
         <h3>Menu Digital</h3>
         <button>Experimente gratuitamente*</button>
       </div>
       <section id="menu-home">
         <div class="menu-description">
-          <p>Utilize sem pagar por 30 dias. Cancela automaticamente em caso de não renovação*</p>
+          <p>Use gratuitamente durante 30 dias. Cancelamento automático em caso de não renovação*</p>
         </div>
       </section>
       <section id="menu-product">

@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <!-- scripts -->
-    <script src="js/dom-helper.js"></script>
+    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/cookies.js"></script>
+    <script type="module" src="js/dom-helper.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP68S7WD0X"></script>
     <script>
@@ -53,15 +55,15 @@
       </div>
       <div id="cookies">
         <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
-        <button onclick="acceptCookies()">Entendi</button>
+        <button>Entendi</button>
       </div>
       <section id="welcome">
         <div class="translate" id="translate">
-          <i class="fa fa-close" id="closeTranslate" onclick="closeTranslate()"></i>
-          <i class="fa fa-flag" id="openTranslate" onclick="openTranslate()"></i>
-          <img src="assets/usa.webp" alt="english" onclick="translateToEnglish()" />
-          <img src="assets/portugal.webp" alt="portuguese" onclick="translateToPortuguese()" />
-          <img src="assets/spain.webp" alt="spanish" onclick="translateToSpanish()" />
+          <i class="fa fa-close" id="closeTranslate"></i>
+          <i class="fa fa-flag" id="openTranslate"></i>
+          <img src="assets/usa.webp" alt="english" id="home-english" />
+          <img src="assets/portugal.webp" alt="portuguese" id="home-portuguese" />
+          <img src="assets/spain.webp" alt="spanish" id="home-spanish" />
         </div>
         <div class="logo">
           <img src="assets/logo.webp" alt="logo" />
@@ -71,10 +73,10 @@
         <p>A partir de <span class="prices">0</span><span class="currency">€</span> por mês</p>
         <div class="links">
           <span class="btn-and-animation">
-            <button onclick="scrollToSection('contact')">Contacto</button>
+            <button id="contact-btn">Contacto</button>
             <span class="btn-animation"></span>
           </span>
-          <a onclick="scrollToSection('pricing')">Saiba mais ></a>
+          <a id="learn-more-link">Saiba mais ></a>
         </div>
         <img class="welcome-image" src="assets/welcome.webp" alt="welcome-image" />
       </section>
@@ -92,7 +94,7 @@
                 </li>
               </ul>
               <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button onclick="window.location.href='pages/menu.html'">Começar</button>
+              <button id="learn-more-btn-1">Saiba mais</button>
             </div>
             <div class="card-right" id="simple-website">
               <img src="assets/digital-menu.webp" alt="simple-website" />
@@ -110,7 +112,7 @@
               </ul>
               <!-- <h3><del><span style="color: var(--black);">250€</span></del> 200€ / year</h3> -->
               <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button onclick="scrollToSection('contact')">Começar</button>
+              <button id="learn-more-btn-2">Saiba mais</button>
             </div>
             <div class="card-right" id="simple-website">
               <img src="assets/simple-website.webp" alt="simple-website" />
@@ -126,7 +128,7 @@
                 </li>
               </ul>
               <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button onclick="scrollToSection('contact')">Começar</button>
+              <button id="learn-more-btn-3">Saiba mais</button>
             </div>
             <div class="card-right" id="internal-system">
               <img src="assets/internal-system.webp" alt="internal-system" />
@@ -145,7 +147,7 @@
                 </li>
               </ul>
               <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button onclick="scrollToSection('contact')">Começar</button>
+              <button id="learn-more-btn-4">Saiba mais</button>
             </div>
           </div>
         </div>
@@ -173,7 +175,7 @@
         <p>Algumas das perguntas mais comuns que recebemos</p>
         <div class="faq-container">
           <div class="left-container">
-            <div class="box" onclick="toggleDescription(this)">
+            <div class="box">
               <h2 class="box-title">O que é o The Website Builder?</h2>
               <p class="box-description">
                 O The Website Builder é uma empresa de desenvolvimento web que oferece serviços de criação de sites,
@@ -181,7 +183,7 @@
                 prontos para ajudar a levar o seu negócio para o próximo nível.
               </p>
             </div>
-            <div class="box" onclick="toggleDescription(this)">
+            <div class="box">
               <h2 class="box-title">Oferecem serviços de manutenção de sites?</h2>
               <p class="box-description">
                 Sim, oferecemos manutenção de sites em todos os pacotes para garantir que seu site permaneça atualizado,
@@ -189,7 +191,7 @@
                 atualizações de software e suporte técnico.
               </p>
             </div>
-            <div class="box" onclick="toggleDescription(this)">
+            <div class="box">
               <h2 class="box-title">Fornecem serviços de otimização de pesquisa (SEO)?</h2>
               <p class="box-description">
                 Sim, oferecemos serviços abrangentes de SEO para melhorar a visibilidade do seu site nos motores de
@@ -199,7 +201,7 @@
             </div>
           </div>
           <div class="right-container">
-            <div class="box" onclick="toggleDescription(this)">
+            <div class="box">
               <h2 class="box-title">Podem integrar funcionalidades de e-commerce no meu site?</h2>
               <p class="box-description">
                 Com certeza! No nosso melhor pacote, criamos uma loja online e integramos sistemas de carrinho de
@@ -208,7 +210,7 @@
                 para atender às suas necessidades.
               </p>
             </div>
-            <div class="box" onclick="toggleDescription(this)">
+            <div class="box">
               <h2 class="box-title">Quanto tempo leva para construir um site?</h2>
               <p class="box-description">
                 O tempo de construção do site depende do tamanho e da complexidade do projeto. No entanto, a maioria dos
@@ -217,7 +219,7 @@
               </p>
             </div>
 
-            <div class="box" onclick="toggleDescription(this)">
+            <div class="box">
               <h2 class="box-title">E se eu precisar de assistência depois do meu site ser lançado?</h2>
               <p class="box-description">
                 Nós oferecemos suporte contínuo mesmo depois do seu site ser lançado. A nossa equipa está disponível

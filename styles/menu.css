@@ -17,7 +17,7 @@ body {
   top: 150px;
 }
 
-.menu-navbar {
+#menu-navbar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -28,15 +28,15 @@ body {
   align-items: center;
   padding: 1rem 10rem;
   background-color: var(--white);
-  z-index: 100;
+  z-index: 3;
   border-bottom: 2px solid var(--whitesmoke);
 }
 
-.menu-navbar h3 {
+#menu-navbar h3 {
   font-weight: 500;
 }
 
-.menu-navbar button {
+#menu-navbar button {
   width: auto;
   height: auto;
   padding: 0.5rem 1rem;
@@ -261,7 +261,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .menu-navbar {
+  #menu-navbar {
     padding: 1rem 5rem;
   }
 
@@ -285,11 +285,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  .menu-navbar {
+  #menu-navbar {
     padding: 1rem 2rem;
   }
 
-  .menu-navbar button {
+  #menu-navbar button {
     padding: 0.4rem 1rem;
     font-size: 0.8rem;
   }
@@ -300,6 +300,7 @@ body {
 
   #menu-product h1 {
     font-size: 3rem;
+    text-align: center;
   }
 
   #menu-product button {
@@ -369,11 +370,11 @@ body {
 }
 
 @media (max-width: 425px) {
-  .menu-navbar {
+  #menu-navbar {
     padding: 1rem 1rem;
   }
 
-  .menu-navbar button {
+  #menu-navbar button {
     padding: 0.4rem 0.8rem;
     font-size: 0.7rem;
   }
@@ -384,6 +385,7 @@ body {
 
   #menu-product h1 {
     font-size: 2.5rem;
+    text-align: center;
   }
 
   #menu-product button {

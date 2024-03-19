@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="menu digital, menus, menu, alternativa, papel, alternativa ao papel, cafe, cafes, café, cafés, bar, bares, restaurante, restaurantes, portugal, braga"
+    />
+    <!-- title and description -->
+    <title>Menu Digital - Para cafés ou restaurantes</title>
+    <meta name="description" content="Menu digital para cafés, restaurantes e bares." />
+    <!-- Apple Icon when save to phone -->
+    <link rel="apple-touch-icon" href="../../assets/logo.webp" />
+    <!-- favicon -->
+    <link rel="icon" href="../../assets/logo.ico" type="image/ico" />
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/menu.css" />
+    <!-- scripts -->
+    <script src="../js/dom-helper.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP68S7WD0X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-CP68S7WD0X');
+    </script>
+  </head>
+  <body>
+    <div id="loading">
+      <div id="loading-circle"></div>
+    </div>
+    <main>
+      <div id="whatsapp">
+        <a href="https://wa.me/351935502231?text=Olá," target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-whatsapp fa-2x"></i>
+        </a>
+      </div>
+      <div id="cookies">
+        <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
+        <button onclick="acceptCookies()">Entendi</button>
+      </div>
+      <div class="translate" id="translate">
+        <i class="fa fa-close" id="closeTranslate" onclick="closeTranslate()"></i>
+        <i class="fa fa-flag" id="openTranslate" onclick="openTranslate()"></i>
+        <img src="../assets/usa.webp" alt="english" onclick="translateToEnglishMenu()" />
+        <img src="../assets/portugal.webp" alt="portuguese" onclick="translateToPortugueseMenu()" />
+        <img src="../assets/spain.webp" alt="spanish" onclick="translateToSpanishMenu()" />
+      </div>
+      <div class="menu-navbar">
+        <h3>Menu Digital</h3>
+        <button>Experimente gratuitamente*</button>
+      </div>
+      <section id="menu-home">
+        <div class="menu-description">
+          <p>Utilize sem pagar por 30 dias*</p>
+        </div>
+      </section>
+      <section id="menu-product">
+        <img src="../assets/logo.webp" alt="menu-icon" />
+        <h1>Simples e prático.</h1>
+        <button>Experimente por 30 dias*</button>
+        <div class="menu-slide">
+          <img src="../assets/menuqrcode.webp" alt="qrcode" />
+        </div>
+      </section>
+      <section id="menu-details">
+        <h1>A solução perfeita para cafés, restaurantes e bares.</h1>
+        <div class="menu-frame frame-horizontal">
+          <div class="frame-left">
+            <h4>Compatível com tudo.</h4>
+            <p>
+              O nosso Menu Digital é compatível com 99% dos dipositivos Android e iOS. Independentemente do modelo ou da
+              versão do sistema operacional, pode ter a certeza de que o nosso Menu Digital oferecerá uma experiência
+              consistente e intuitiva para os seus clientes, permitindo-lhes desfrutar de todas as funcionalidades sem
+              complicações.
+            </p>
+          </div>
+          <div class="frame-right">
+            <img src="../assets/phones.webp" alt="phone" />
+          </div>
+        </div>
+        <div class="menu-frame frame-vertical">
+          <div class="frame-left">
+            <h4>Atualizações instantâneas.</h4>
+            <p>
+              Com o nosso Menu Digital, pode atualizar o seu menu em tempo real. Adicione, remova ou edite itens do menu
+              com facilidade, sem a necessidade de reimprimir o menu.
+            </p>
+          </div>
+          <div class="frame-right">
+            <img src="../assets/edit-menu.webp" alt="edit-menu" />
+          </div>
+        </div>
+        <div class="menu-frame frame-vertical">
+          <div class="frame-left">
+            <h4>Amigos do ambiente.</h4>
+            <p>
+              O papel é uma das principais fontes de poluição no mundo. Ao optar pelo nosso Menu Digital, está a
+              contribuir para a redução do consumo de papel e, consequentemente, para a preservação do meio ambiente.
+            </p>
+          </div>
+          <div class="frame-right">
+            <img src="../assets/earth-friendly.webp" alt="eco-friendly" />
+          </div>
+        </div>
+      </section>
+      <section id="menu-faq">
+        <h1>Perguntas frequentes</h1>
+        <div class="menu-faq-item">
+          <h4>Como posso experimentar o Menu Digital?</h4>
+          <p>
+            Pode experimentar o nosso Menu Digital gratuitamente durante 30 dias. Após o período experimental, o menu é
+            cancelado automaticamente na ausência de renovação por parte do cliente.
+          </p>
+        </div>
+        <div class="menu-faq-item">
+          <h4>Como posso adicionar o Menu Digital ao meu café, restaurante ou bar?</h4>
+          <p>
+            Para adicionar o Menu Digital ao seu café, restaurante ou bar, basta preencher o formulário de contacto
+            disponível no nosso site. Após submissão do formulário, entraremos em contacto consigo para agendar uma
+            reunião.
+          </p>
+        </div>
+        <div class="menu-faq-item">
+          <h4>Como posso atualizar o meu menu?</h4>
+          <p>
+            Pode atualizar o seu menu em tempo real através do nosso painel de controlo. O painel de controlo é
+            acessível a partir de qualquer dispositivo com ligação à internet.
+          </p>
+        </div>
+      </section>
+      <section id="menu-disclaimer">
+        <p>
+          * A oferta está disponível por tempo limitado para novos clientes. <br>** Oferta válida durante 30 dias após criação
+          do menú. <br>*** O menu é cancelado automaticamente após o período experimental na ausência de renovação por parte do
+          cliente.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>@2024 The Website Builder - Construído por José Castro</p>
+    </footer>
+  </body>
+</html>

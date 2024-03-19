@@ -137,19 +137,6 @@ function scrollToSection(sectionName) {
 // this year
 const thisYear = new Date().getFullYear();
 
-//// TEXT ////
-// click on "get started" button to write a description in textarea
-const textDescriptions = [
-  'I need a website to promote my work',
-  'I need a way to sell my products online',
-  'I need to manage my business internally',
-  'I need an bespoke online store for my business',
-];
-function writeDescription(num) {
-  document.getElementById('textarea').value = textDescriptions[num];
-  scrollToSection('contact');
-}
-
 //// TEXT TRANSLATION ////
 // open the language modal
 function openTranslate() {
@@ -205,7 +192,7 @@ function translateToEnglish() {
   document.querySelectorAll('.card ul li')[3].innerText =
     "Kickstart your online store journey and unlock robust features to seamlessly oversee every facet of your business, whether you're just beginning or experiencing rapid growth.";
   document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / month'));
-  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Get started'));
+  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Learn more'));
 
   // Translate text in the clients section
   document.getElementById('clients').getElementsByTagName('h1')[0].innerText = 'Want to see our work?';
@@ -279,7 +266,7 @@ function translateToPortuguese() {
   document.querySelectorAll('.card ul li')[3].innerText =
     'A loja online que sempre sonhou. Construída à medida do seu negócio, com todas as funcionalidades que precisa para vender online.';
   document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / mês'));
-  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Começar'));
+  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Saiba mais'));
 
   // Translate text in the clients section
   document.getElementById('clients').getElementsByTagName('h1')[0].innerText = 'Quer ver o nosso trabalho?';
@@ -358,7 +345,7 @@ function translateToSpanish() {
   document.querySelectorAll('.card ul li')[3].innerText =
     'La tienda online que siempre soñaste. Construida a medida de tu negocio, con todas las funcionalidades que necesitas para vender online.';
   document.querySelectorAll('.card h3').forEach((h3, i) => (h3.innerText = prices[i + 1] + currency + ' / mes'));
-  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Comenzar'));
+  document.querySelectorAll('.card button').forEach((button) => (button.innerText = 'Más información'));
 
   // Translate text in the clients section
   document.getElementById('clients').getElementsByTagName('h1')[0].innerText = '¿Quieres ver nuestro trabajo?';

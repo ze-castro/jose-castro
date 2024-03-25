@@ -1,7 +1,3 @@
-body {
-  overflow-x: hidden;
-}
-
 /* home */
 #menu-home {
   position: relative;
@@ -381,6 +377,7 @@ body {
 
   .menu-description p {
     font-size: 0.7rem;
+    padding: 0 1rem;
   }
 
   #menu-product h1 {

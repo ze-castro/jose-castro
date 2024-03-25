@@ -34,8 +34,10 @@ const openTranslateBtn = document.getElementById('openTranslate');
 const closeTranslateBtn = document.getElementById('closeTranslate');
 
 // add event listeners to the buttons
-openTranslateBtn.addEventListener('click', openTranslate);
-closeTranslateBtn.addEventListener('click', closeTranslate);
+if (openTranslateBtn && closeTranslateBtn) {
+  openTranslateBtn.addEventListener('click', openTranslate);
+  closeTranslateBtn.addEventListener('click', closeTranslate);
+}
 
 // open the language modal
 function openTranslate() {

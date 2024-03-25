@@ -2,7 +2,7 @@ import { thisYear, hideLoading, toggleDescription, scrollToSection, openTranslat
 //// PRICES ////
 // EUR - prices
 let prices = [];
-const pricesEUR = [49, 5, 49, 299, 449];
+const pricesEUR = [49, 9, 49, 299, 449];
 const pricesUSD = [69, 19, 69, 399, 699];
 let currency = '';
 const currencyEUR = '€';
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   checkLocation();
 });
 
-//// COOKIES ////
 // function to get the user location
 async function checkLocation() {
   // fetch the user location

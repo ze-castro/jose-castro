@@ -1,4 +1,11 @@
-import { thisYear, hideLoading, toggleDescription, scrollToSection, openTranslate, closeTranslate } from './dom-helper.js';
+import {
+  thisYear,
+  hideLoading,
+  toggleDescription,
+  scrollToSection,
+  openTranslate,
+  closeTranslate,
+} from './dom-helper.js';
 
 // after the page is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +38,17 @@ async function checkLocation() {
     .catch((error) => {
       console.error('Error fetching currency:', error);
     });
-    hideLoading();
+  hideLoading();
+}
+
+//// PAGE REDIRESCT ////
+// redirect to the MENU HOME page: onclick of the try button redirect to menu/home.html
+const tryBtns = document.getElementsByClassName('try-btn');
+console.log(tryBtns);
+for (let i = 0; i < tryBtns.length; i++) {
+  tryBtns[i].addEventListener('click', () => {
+    window.location.href = '#';
+  });
 }
 
 //// TEXT TRANSLATION ////
@@ -109,8 +126,6 @@ function translateToPortugueseMenu() {
     'Pode atualizar o seu menu em tempo real através do nosso painel de controlo. O painel de controlo é acessível a partir de qualquer dispositivo com ligação à internet.';
   document.getElementById('menu-disclaimer').getElementsByTagName('p')[0].innerHTML =
     '* A oferta está disponível por tempo limitado para novos clientes. <br>** Oferta válida durante 30 dias após a criação do menu. <br>*** O menu é cancelado automaticamente após o período de experiência na ausência de renovação por parte do cliente.';
-  document.querySelector('footer > p').textContent =
-    '@' + thisYear + ' The Website Builder - Construído por José Castro';
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construído por José Castro';
@@ -183,8 +198,6 @@ function translateToSpanishMenu() {
     'Puede actualizar su menú en tiempo real a través de nuestro panel de control. El panel de control es accesible desde cualquier dispositivo con conexión a Internet.';
   document.getElementById('menu-disclaimer').getElementsByTagName('p')[0].innerHTML =
     '* La oferta está disponible por tiempo limitado para nuevos clientes. <br>** Oferta válida durante 30 días después de la creación del menú. <br>*** El menú se cancela automáticamente después del período de prueba en ausencia de renovación por parte del cliente.';
-  document.querySelector('footer > p').textContent =
-    '@' + thisYear + ' The Website Builder - Construido por José Castro';
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Construido por José Castro';
@@ -256,7 +269,6 @@ function translateToEnglishMenu() {
     'You can update your menu in real time through our control panel. The control panel is accessible from any device with internet connection.';
   document.getElementById('menu-disclaimer').getElementsByTagName('p')[0].innerHTML =
     '* The offer is available for a limited time to new customers. <br>** Offer valid for 30 days after menu creation. <br>*** The menu is automatically canceled after the trial period in the absence of renewal by the customer.';
-  document.querySelector('footer > p').textContent = '@2024 The Website Builder - Built by José Castro';
 
   // Translate text in the footer
   document.querySelector('footer p').innerText = '@' + thisYear + ' The Website Builder - Made by José Castro';

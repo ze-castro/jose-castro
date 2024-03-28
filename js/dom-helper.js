@@ -9,8 +9,8 @@ function hideLoading() {
 }
 
 // expand faq boxes
-function toggleDescription(box) {
-  box.classList.toggle('expanded');
+function toggleDescription() {
+  this.classList.toggle('expanded');
 }
 
 // scroll to section

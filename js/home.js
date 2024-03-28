@@ -1,4 +1,11 @@
-import { thisYear, hideLoading, toggleDescription, scrollToSection, openTranslate, closeTranslate } from './dom-helper.js';
+import {
+  thisYear,
+  hideLoading,
+  toggleDescription,
+  scrollToSection,
+  openTranslate,
+  closeTranslate,
+} from './dom-helper.js';
 //// PRICES ////
 // EUR - prices
 let prices = [];
@@ -68,8 +75,10 @@ async function checkLocation() {
 document.getElementById('contact-btn').addEventListener('click', () => scrollToSection('contact'));
 // onclick of the learn more link
 document.getElementById('learn-more-link').addEventListener('click', () => scrollToSection('pricing'));
-// onclick of the learn more button 1
-document.getElementById('learn-more-btn-1').addEventListener('click', () => window.location.href = 'pages/menu.html');
+// onclick of the learn more button 1 redirects to google drive
+document
+  .getElementById('learn-more-btn-1')
+  .addEventListener('click', () => window.open('https://ementify.com', '_blank'));
 // onclick of the rest of the learn more buttons
 document.getElementById('learn-more-btn-2').addEventListener('click', () => scrollToSection('contact'));
 document.getElementById('learn-more-btn-3').addEventListener('click', () => scrollToSection('contact'));

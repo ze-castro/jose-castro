@@ -304,17 +304,18 @@ nav p {
   min-height: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  padding: 0 10%;
   gap: 1rem;
   overflow: auto;
 }
 
 .websites .website {
   width: 350px;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,10 +611,6 @@ nav p {
   }
   #clients p {
     font-size: 1rem;
-  }
-  .websites .website {
-    width: 250px;
-    height: 150px;
   }
   .websites .website a {
     font-size: 1rem;

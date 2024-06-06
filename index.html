@@ -49,11 +49,6 @@
       <div id="loading-circle"></div>
     </div>
     <main>
-      <div id="whatsapp">
-        <a href="https://wa.me/351935502231?text=Olá," target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-whatsapp fa-2x"></i>
-        </a>
-      </div>
       <div id="cookies">
         <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
         <button>Entendi</button>
@@ -71,7 +66,7 @@
           <h4>the-website-builder</h4>
         </div>
         <h1>Sites para a sua empresa com foco na privacidade</h1>
-        <p>A partir de <span class="prices">0</span><span class="currency">€</span> por mês</p>
+        <p>A partir de <span class="prices">0</span><span class="currency">€</span></p>
         <div class="links">
           <span class="btn-and-animation">
             <button id="contact-btn">Contacto</button>
@@ -87,54 +82,19 @@
         <div class="pricing-cards">
           <div class="card">
             <div class="card-left">
-              <h2>Menu Digital</h2>
-              <ul>
-                <li>
-                  Através de um código QR, os clientes podem visualizar o menu do seu restaurante,
-                  café ou bar, no smartphone. Inclui atualização de conteúdo anual e suporte por
-                  email contínuo.
-                </li>
-              </ul>
-              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button id="learn-more-btn-1">Saiba mais</button>
-            </div>
-            <div class="card-right" id="simple-website">
-              <img src="assets/digital-menu.webp" alt="simple-website" />
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-left">
               <h2>Site Profissional</h2>
               <ul>
                 <li>
                   O essencial para divulgar o seu negócio na internet, incluindo várias páginas, um
-                  domínio personalizado, uma conta de email profissional, um formulário de contacto,
-                  uma atualização de conteúdo anual e suporte por email contínuo.
+                  domínio personalizado e uma conta de email profissional.
                 </li>
               </ul>
               <!-- <h3><del><span style="color: var(--black);">250€</span></del> 200€ / year</h3> -->
-              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button id="learn-more-btn-2">Saiba mais</button>
+              <h3>A partir de <span class="prices">0</span><span class="currency">€</span></h3>
+              <button id="learn-more-btn-1">Saiba mais</button>
             </div>
             <div class="card-right" id="simple-website">
               <img src="assets/simple-website.webp" alt="simple-website" />
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-left">
-              <h2>Sistema de Gestão Empresarial</h2>
-              <ul>
-                <li>
-                  Um painel de administração com monitoração de comissões, gestão de stock,
-                  supervisão de projetos, relatórios automatizados e análises para uma eficiência
-                  aprimorada.
-                </li>
-              </ul>
-              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
-              <button id="learn-more-btn-3">Saiba mais</button>
-            </div>
-            <div class="card-right" id="internal-system">
-              <img src="assets/internal-system.webp" alt="internal-system" />
             </div>
           </div>
           <div class="card">
@@ -142,14 +102,51 @@
               <img src="assets/online-store.webp" alt="online-store" />
             </div>
             <div class="card-left">
-              <h2>Loja Online Personalizada</h2>
+              <h2>Loja Online</h2>
               <ul>
                 <li>
                   A loja online que sempre sonhou. Construída à medida do seu negócio, com todas as
                   funcionalidades que precisa para vender online.
                 </li>
               </ul>
-              <h3><span class="prices">0</span><span class="currency">€</span> / month</h3>
+              <h3>
+                A partir de <span class="prices">0</span><span class="currency">€</span> / mês
+              </h3>
+              <button id="learn-more-btn-2">Saiba mais</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <h2>Sistema de Gestão</h2>
+              <ul>
+                <li>
+                  Um painel de administração com monitoração de comissões, gestão de stock,
+                  supervisão de projetos, relatórios automatizados e análises para uma eficiência
+                  aprimorada.
+                </li>
+              </ul>
+              <h3>
+                A partir de <span class="prices">0</span><span class="currency">€</span> / mês
+              </h3>
+              <button id="learn-more-btn-3">Saiba mais</button>
+            </div>
+            <div class="card-right" id="internal-system">
+              <img src="assets/internal-system.webp" alt="internal-system" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-right" id="personalized-software">
+              <img src="assets/personalized-software.webp" alt="personalized-software" />
+            </div>
+            <div class="card-left">
+              <h2>Soluções Personalizadas</h2>
+              <ul>
+                <li>
+                  Se tem uma ideia específica para uma plataforma, entre em contato connosco para
+                  discutir as suas necessidades e obter um orçamento personalizado.
+                </li>
+              </ul>
+              <h3>Orçamento à sua medida</h3>
               <button id="learn-more-btn-4">Saiba mais</button>
             </div>
           </div>
@@ -262,17 +259,14 @@
       <section id="contact">
         <h1>Tem dúvidas?</h1>
         <p>Envia-nos uma mensagem e entraremos em contato o mais breve possível</p>
-        <form action="https://formspree.io/f/mdovqjdg" method="POST">
-          <input type="text" name="name" placeholder="Ryan Reynolds" required />
-          <input type="email" name="email" placeholder="example@email.com" required />
-          <textarea
-            id="textarea"
-            name="message"
-            placeholder="Entregam cachorros-quentes em Marte?"
-            required
-          ></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+        <div class="contact-box">
+          <a href="mailto:support@thewebsitebuilder.net">support@thewebsitebuilder.net</a>
+          <p>ou</p>
+          <a href="https://wa.me/351935502231?text=Olá,">
+            <i class="fa fa-whatsapp"></i>
+            +351 935 502 231</a
+          >
+        </div>
       </section>
     </main>
     <footer>

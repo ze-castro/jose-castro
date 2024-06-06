@@ -94,6 +94,13 @@ document
 document
   .querySelectorAll('.box')
   .forEach((box) => box.addEventListener('click', () => toggleDescription(box)));
+// onclick of the contact links (open in new tab)
+document
+  .getElementById('contact-email')
+  .addEventListener('click', () => window.open('mailto:support@thewebsitebuilder.net'));
+document
+  .getElementById('contact-whatsapp')
+  .addEventListener('click', () => window.open('https://wa.me/351935502231?text=Olá,'));
 
 //// TEXT TRANSLATION ////
 // buttons to change the language

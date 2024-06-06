@@ -183,13 +183,9 @@ function translateToEnglish() {
     'We provide ongoing customer support even after your website is launched. Our dedicated support team is available to address any questions, concerns, or technical issues you may encounter, ensuring a seamless website experience.';
   // Translate text in the contact section
   document.getElementById('contact').getElementsByTagName('h1')[0].innerText = 'Any questions?';
-  document.querySelector('#contact p').innerText =
+  document.querySelector('#contact>p').innerText =
     'Send us a message, and we will get back to you as soon as possible';
-  document
-    .querySelector('#textarea')
-    .setAttribute('placeholder', 'Do you deliver hot dogs to Mars?');
-  document.querySelector('#contact button').innerText = 'Send';
-
+  document.querySelector('#contact .contact-box p').innerText = 'or';
   // Translate text in the footer
   document.querySelector('footer p').innerText =
     '@' + thisYear + ' The Website Builder - Made by José Castro';
@@ -276,10 +272,7 @@ function translateToPortuguese() {
   document.getElementById('contact').getElementsByTagName('h1')[0].innerText = 'Tem dúvidas?';
   document.querySelector('#contact p').innerText =
     'Envia-nos uma mensagem e entraremos em contato o mais breve possível';
-  document
-    .querySelector('#textarea')
-    .setAttribute('placeholder', 'Entregam cachorros-quentes em Marte?');
-  document.querySelector('#contact button').innerText = 'Enviar';
+  document.querySelector('#contact .contact-box p').innerText = 'ou';
 
   // Translate text in the footer
   document.querySelector('footer p').innerText =
@@ -371,10 +364,7 @@ function translateToSpanish() {
   document.getElementById('contact').getElementsByTagName('h1')[0].innerText = '¿Tienes preguntas?';
   document.querySelector('#contact p').innerText =
     'Envíenos un mensaje y nos pondremos en contacto con usted lo antes posible';
-  document
-    .querySelector('#textarea')
-    .setAttribute('placeholder', '¿Entregan perritos calientes en Marte?');
-  document.querySelector('#contact button').innerText = 'Enviar';
+  document.querySelector('#contact .contact-box p').innerText = 'o';
 
   // Translate text in the footer
   document.querySelector('footer p').innerText =

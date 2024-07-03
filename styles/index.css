@@ -503,6 +503,8 @@ nav p {
   min-height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
   margin-top: 2rem;
   padding: 1rem;

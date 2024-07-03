@@ -19,12 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('https://policies.google.com/privacy');
   console.log('We use Google Analytics to track the number of visitors of our website.');
   console.log('');
-  console.log('%cIpapi.co', 'font-weight: bold; font-size: 0.8rem;');
-  console.log('https://ipapi.co/api/');
-  console.log(
-    'We use Ipapi.co to get the user location and translate the website to the user language. We also adjust the prices to the US users because we are based in Portugal and services there are more expensive for us.'
-  );
-  console.log('');
   console.log('%cLocal Storage', 'font-weight: bold; font-size: 0.8rem;');
   console.log(
     'We use local storage to store if the user has accepted the cookies, that way we do not show the cookies bar every time the user visits the website.'

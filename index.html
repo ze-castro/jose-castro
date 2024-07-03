@@ -45,20 +45,10 @@
       <p>All simple websites 20% off!</p>
       <p>Until end of the year</p>
     </nav> -->
-    <div id="loading">
-      <div id="loading-circle"></div>
-    </div>
     <main>
       <div id="cookies">
         <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
         <button>Entendi</button>
-      </div>
-      <div class="translate" id="translate">
-        <i class="fa fa-close" id="closeTranslate"></i>
-        <i class="fa fa-flag" id="openTranslate"></i>
-        <img src="assets/usa.webp" alt="english" id="home-english" />
-        <img src="assets/portugal.webp" alt="portuguese" id="home-portuguese" />
-        <img src="assets/spain.webp" alt="spanish" id="home-spanish" />
       </div>
       <section id="welcome">
         <div class="logo">
@@ -66,7 +56,7 @@
           <h4>the-website-builder</h4>
         </div>
         <h1>Sites para a sua empresa com foco na privacidade</h1>
-        <p>A partir de <span class="prices">0</span><span class="currency">€</span></p>
+        <p>A partir de <span class="prices">49</span><span class="currency">€</span></p>
         <div class="links">
           <span class="btn-and-animation">
             <button id="contact-btn">Contacto</button>
@@ -89,7 +79,7 @@
                   domínio personalizado e uma conta de email profissional.
                 </li>
               </ul>
-              <h3>A partir de <span class="prices">0</span><span class="currency">€</span></h3>
+              <h3>A partir de <span class="prices">49</span><span class="currency">€</span></h3>
               <button id="learn-more-btn-1">Saiba mais</button>
             </div>
             <div class="card-right" id="simple-website">
@@ -109,7 +99,7 @@
                 </li>
               </ul>
               <h3>
-                A partir de <span class="prices">0</span><span class="currency">€</span> / mês
+                A partir de <span class="prices">59</span><span class="currency">€</span> / mês
               </h3>
               <button id="learn-more-btn-2">Saiba mais</button>
             </div>
@@ -125,7 +115,7 @@
                 </li>
               </ul>
               <h3>
-                A partir de <span class="prices">0</span><span class="currency">€</span> / mês
+                A partir de <span class="prices">99</span><span class="currency">€</span> / mês
               </h3>
               <button id="learn-more-btn-3">Saiba mais</button>
             </div>
@@ -156,12 +146,8 @@
         <p>Clientes que confiam na nossa experiência e no nosso trabalho</p>
         <div class="websites">
           <div class="website">
-            <a
-              href="https://exclusivecardetailing.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <img src="assets/exclusive-car-detailing.webp" alt="website" />
+            <a href="https://jotaautodetail.com" target="_blank" rel="noopener noreferrer"></a>
+            <img src="assets/jotaautodetail.webp" alt="website" />
           </div>
           <div class="website">
             <a href="https://brandboostmedia.pt/" target="_blank" rel="noopener noreferrer"></a>
@@ -173,15 +159,19 @@
           </div>
           <div class="website">
             <a
+              href="https://exclusivecardetailing.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <img src="assets/exclusive-car-detailing.webp" alt="website" />
+          </div>
+          <div class="website">
+            <a
               href="https://online-store-api-docs.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
             ></a>
             <img src="assets/online-store-api.webp" alt="website" />
-          </div>
-          <div class="website">
-            <a href="https://jotaautodetail.com" target="_blank" rel="noopener noreferrer"></a>
-            <img src="assets/jotaautodetail.webp" alt="website" />
           </div>
           <div class="website">
             <a onclick="alert('Este projeto é privado, logo não pode ser partilhado.')"></a>
@@ -259,9 +249,9 @@
         <h1>Tem dúvidas?</h1>
         <p>Envia-nos uma mensagem e entraremos em contato o mais breve possível</p>
         <div class="contact-box">
-          <a id="contact-email">support@thewebsitebuilder.net</a>
+          <a id="contact-email" href="mailto:support@thewebsitebuilder.net?subject=Pedido de Orçamento | thewebsitebuilder.net">support@thewebsitebuilder.net</a>
           <p>ou</p>
-          <a id="contact-whatsapp">
+          <a id="contact-whatsapp" href="https://wa.me/351935502231" target="_blank" rel="noopener noreferrer">
             <i class="fa fa-whatsapp"></i>
             +351 935 502 231</a
           >
@@ -269,7 +259,7 @@
       </section>
     </main>
     <footer>
-      <p>@2024 The Website Builder - Construído por José Castro</p>
+      <p>@<span id="year">2024</span> The Website Builder - Construído por José Castro</p>
     </footer>
   </body>
 </html>

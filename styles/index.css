@@ -454,7 +454,7 @@ nav p {
   text-align: center;
 }
 
-#contact p:not(.contact-box p) {
+#contact p {
   font-size: var(--font-size-subtitle);
   font-weight: var(--font-weight-light);
   text-align: center;
@@ -465,38 +465,59 @@ nav p {
 #contact .contact-box {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
 #contact .contact-box a {
-  font-size: var(--font-size-subtitle);
+  font-size: var(--font-size-email);
   font-weight: var(--font-weight-light);
   color: var(--black);
-  background-color: var(--lighter-gray);
-  padding: 1rem 1.5rem;
+  background-color: var(--white);
+  padding: 1rem 2rem;
   border-radius: 1rem;
   text-decoration: none;
   transition: var(--transition);
+  position: relative;
 }
 
 #contact .contact-box a i {
-  color: var(--green);
-  margin-right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-email);
+  position: absolute;
+  color: var(--black);
+  right: 2rem;
+  bottom: 0rem;
+  transform: translate(-50%, 50%);
 }
 
 #contact .contact-box a:hover {
   background-color: var(--light-gray);
 }
 
-#contact .contact-box p {
-  font-size: var(--font-size-text);
+/* DISCLAIMER */
+#disclaimer {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--light-gray);
+}
+
+#disclaimer p {
+  font-size: var(--font-size-small);
   font-weight: var(--font-weight-light);
   color: var(--dark-gray);
+}
+
+#disclaimer p a {
+  color: var(--dark-gray);
+  text-decoration: underline;
 }
 
 /* MEDIA QUERIES */
@@ -658,15 +679,12 @@ nav p {
     gap: 1rem;
   }
   #contact .contact-box a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
     border-radius: 0.5rem;
   }
   #contact .contact-box a i {
-    font-size: 1.3rem;
-  }
-  #contact .contact-box p {
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -684,5 +702,17 @@ nav p {
   }
   nav p:last-child {
     display: none;
+  }
+  #contact .contact-box a {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.5rem;
+  }
+  #contact .contact-box a i {
+    font-size: 1.3rem;
+  }
+
+  #disclaimer p {
+    font-size: 0.8rem;
   }
 }

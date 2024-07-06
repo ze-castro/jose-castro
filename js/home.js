@@ -30,9 +30,6 @@ document
   .getElementById('learn-more-btn-2')
   .addEventListener('click', () => scrollToSection('contact'));
 document
-  .getElementById('learn-more-btn-3')
-  .addEventListener('click', () => scrollToSection('contact'));
-document
   .getElementById('learn-more-btn-4')
   .addEventListener('click', () => scrollToSection('contact'));
 // onclick of the faq boxes

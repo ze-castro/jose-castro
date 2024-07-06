@@ -22,6 +22,7 @@
   --darker-paper: #c4c2b5;
   --transparent: transparent;
   --darkened-background: rgba(0, 0, 0, 0.5);
+  --dark-shadow: rgba(0, 0, 0, 0.3);
   --shadow: rgba(0, 0, 0, 0.2);
   --light-shadow: rgba(0, 0, 0, 0.1);
 
@@ -45,6 +46,7 @@
   --border-radius-input: 0.7rem;
 
   /* TRANSITIONS */
+  --fast-transition: 0.1s;
   --transition: 0.3s;
   --loading-transition: 1s;
   --slow-transition: 0.5s;

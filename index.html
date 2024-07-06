@@ -20,6 +20,7 @@
     <!-- favicon -->
     <link rel="icon" href="assets/logo.ico" type="image/ico" />
     <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/index.css" />
@@ -27,6 +28,8 @@
     <script type="module" src="js/home.js"></script>
     <script type="module" src="js/cookies.js"></script>
     <script type="module" src="js/dom-helper.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP68S7WD0X"></script>
     <script>
@@ -125,43 +128,46 @@
       <section id="clients">
         <h1>Com quem trabalhamos?</h1>
         <p>Clientes que confiam na nossa experiência e no nosso trabalho</p>
-        <div class="websites">
-          <div class="website">
-            <a href="https://luizaseabra.pt/" target="_blank" rel="noopener noreferrer"></a>
-            <img src="assets/luizaseabra.webp" alt="website" />
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="https://luizaseabra.pt/" target="_blank" rel="noopener noreferrer"></a>
+              <img src="assets/luizaseabra.webp" alt="website" />
+            </div>
+            <div class="swiper-slide">
+              <a href="https://jotaautodetail.com" target="_blank" rel="noopener noreferrer"></a>
+              <img src="assets/jotaautodetail.webp" alt="website" />
+            </div>
+            <div class="swiper-slide">
+              <a href="https://brandboostmedia.pt/" target="_blank" rel="noopener noreferrer"></a>
+              <img src="assets/brandboostmedia.webp" alt="website" />
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.ementify.com" target="_blank" rel="noopener noreferrer"></a>
+              <img src="assets/menu-ementify.webp" alt="website" />
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="https://exclusivecardetailing.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <img src="assets/exclusive-car-detailing.webp" alt="website" />
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="https://online-store-api-docs.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <img src="assets/online-store-api.webp" alt="website" />
+            </div>
+            <div class="swiper-slide">
+              <a onclick="alert('Este projeto é privado, logo não pode ser partilhado.')"></a>
+              <img src="assets/happies.webp" alt="website" />
+            </div>
           </div>
-          <div class="website">
-            <a href="https://jotaautodetail.com" target="_blank" rel="noopener noreferrer"></a>
-            <img src="assets/jotaautodetail.webp" alt="website" />
-          </div>
-          <div class="website">
-            <a href="https://brandboostmedia.pt/" target="_blank" rel="noopener noreferrer"></a>
-            <img src="assets/brandboostmedia.webp" alt="website" />
-          </div>
-          <div class="website">
-            <a href="https://www.ementify.com" target="_blank" rel="noopener noreferrer"></a>
-            <img src="assets/menu-ementify.webp" alt="website" />
-          </div>
-          <div class="website">
-            <a
-              href="https://exclusivecardetailing.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <img src="assets/exclusive-car-detailing.webp" alt="website" />
-          </div>
-          <div class="website">
-            <a
-              href="https://online-store-api-docs.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <img src="assets/online-store-api.webp" alt="website" />
-          </div>
-          <div class="website">
-            <a onclick="alert('Este projeto é privado, logo não pode ser partilhado.')"></a>
-            <img src="assets/happies.webp" alt="website" />
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section id="faq">
@@ -226,7 +232,7 @@
         </div>
       </section>
       <section id="contact">
-        <h1>Tem dúvidas?</h1>
+        <h1>Vamos falar?</h1>
         <p>Envia-nos uma mensagem e entraremos em contato o mais breve possível</p>
         <div class="contact-box">
           <a

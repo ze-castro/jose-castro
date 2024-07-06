@@ -30,4 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.swiper').addEventListener('mouseleave', () => {
     swiper.autoplay.start();
   });
+
+  // for mobile, stop the autoplay when the user swipes
+  document.querySelector('.swiper').addEventListener('touchstart', () => {
+    swiper.autoplay.stop();
+  });
+
+  // for mobile, start the autoplay when the user stops swiping after 1000ms
+  document.querySelector('.swiper').addEventListener('touchend', () => {
+    setTimeout(() => {
+      swiper.autoplay.start();
+    }, 3000);
+  });
 });

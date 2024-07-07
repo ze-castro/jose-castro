@@ -202,7 +202,7 @@ nav p {
 
 .card {
   width: 800px;
-  height: 450px;
+  height: 400px;
   border-radius: 1rem;
   background-color: var(--white);
   border: 1px solid rgba(224, 224, 224, 0.5);
@@ -210,7 +210,6 @@ nav p {
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  padding: 1rem;
   transition: var(--transition);
 }
 
@@ -219,60 +218,67 @@ nav p {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 3rem 1.5rem;
 }
 
-.card-left {
-  justify-content: space-between;
-  padding: 2rem 0;
+#simple-website,
+#online-store,
+#personalized-software {
+  padding: 0;
 }
 
 .card h2 {
-  font-size: var(--font-size-subtitle);
+  font-size: var(--font-size-faq);
   font-weight: var(--font-weight-semibold);
-  text-align: center;
   color: var(--black);
 }
 
 .card li {
-  text-align: center;
   line-height: 2rem;
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-light);
-  padding: 0 2rem;
+  color: var(--grayish);
 }
 
 .card h3 {
   font-size: var(--font-size-subtitle);
   font-weight: var(--font-weight-regular);
-  text-align: center;
   color: var(--black);
 }
 
 .card button {
-  min-width: 130px;
+  width: 100%;
   height: 40px;
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-text);
   background-color: var(--blue);
   padding: 0 1rem;
+  border-radius: 0.5rem;
 }
 
 .card img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 1rem;
   z-index: 1;
+}
+
+#simple-website img,
+#personalized-software img {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+#online-store img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 #simple-website img {
   object-position: 45.5%;
-}
-
-#quote-website img {
-  object-position: 46%;
 }
 
 /* CLIENTS */
@@ -593,61 +599,56 @@ nav p {
   }
   .card {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
     position: relative;
+    border: 1px solid var(--light-gray);
   }
   .card-left,
   .card-right {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .card-left {
-    padding: 1rem 0;
+    padding: 1.5rem 1rem;
     z-index: 2;
   }
-
-  .card-right {
-    display: none;
+  #simple-website,
+  #online-store,
+  #personalized-software {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0;
     z-index: 1;
   }
-
   .card h2 {
     font-size: 1.5rem;
   }
   .card li {
+    padding: 0.5rem 0 1rem 0;
     font-size: 1rem;
   }
   .card h3 {
     font-size: 1.3rem;
+    font-weight: var(--font-weight-semibold);
   }
   .card button {
-    min-width: 100px;
+    width: 100%;
     height: 40px;
     font-size: 1rem;
+    border-radius: 0.5rem;
   }
   .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
+    filter: blur(0.3rem);
     opacity: 0.1;
-    z-index: 1;
   }
   #clients h1 {
     width: 95%;

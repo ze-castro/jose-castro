@@ -289,7 +289,7 @@ nav p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 !important;
+  padding: 0;
 }
 
 #clients h1 {
@@ -305,6 +305,7 @@ nav p {
   margin-top: 0.7rem;
   color: var(--dark-gray);
   text-align: center;
+  padding: 0 1rem;
 }
 
 .swiper {

@@ -1,4 +1,26 @@
 //// TOOLS ////
+// observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+const elementsToObserve = ['.welcome-image', '.card', '.swiper', '.box', '.contact-box']
+  .flatMap((selector) =>
+    selector.includes('.')
+      ? Array.from(document.querySelectorAll(selector))
+      : [document.querySelector(selector)]
+  )
+  .filter(Boolean);
+
+elementsToObserve.forEach((el) => observer.observe(el));
+
 // expand faq boxes
 function toggleDescription(box) {
   // get all the boxes

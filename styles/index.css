@@ -164,6 +164,14 @@ nav p {
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: var(--slow-transition);
+}
+
+#welcome .welcome-image.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* PRICING */
@@ -210,7 +218,14 @@ nav p {
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  transition: var(--transition);
+  transition: var(--slow-transition);
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-left,
@@ -320,6 +335,12 @@ nav p {
   justify-content: center;
   align-items: center;
   padding: 2rem 5rem;
+  transition: var(--slow-transition);
+  opacity: 0;
+}
+
+.swiper.visible {
+  opacity: 1;
 }
 
 .swiper-wrapper {
@@ -353,6 +374,14 @@ nav p {
   align-items: center;
   z-index: 2;
   position: absolute;
+}
+
+.swiper-slide a:hover {
+  cursor:grab;
+}
+
+.swiper-slide a:active {
+  cursor:grabbing;
 }
 
 .swiper-slide img {
@@ -439,7 +468,14 @@ nav p {
   padding: 2rem;
   cursor: pointer;
   border-top: 1px solid var(--light-gray);
-  transition: var(--transition);
+  transition: var(--slow-transition);
+  opacity: 0;
+  transform: translateX(-1rem);
+}
+
+.box.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .box:last-of-type {
@@ -502,6 +538,14 @@ nav p {
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  transition: var(--slow-transition);
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+
+#contact .contact-box.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #contact .contact-box a {

@@ -249,6 +249,12 @@ nav p {
   color: var(--black);
 }
 
+.card h3 p {
+  font-size: var(--font-size-small) !important;
+  color: var(--grayish) !important;
+  margin-top: 0.3rem !important;
+}
+
 .card button {
   width: 100%;
   height: 40px;

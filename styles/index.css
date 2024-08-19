@@ -270,6 +270,12 @@ nav p {
   margin-top: 0.3rem !important;
 }
 
+.card h3 .discount {
+  color: var(--red);
+  font-weight: var(--font-weight-light);
+  margin-left: 0.5rem;
+}
+
 .card button {
   width: 100%;
   height: 40px;
@@ -606,6 +612,24 @@ nav p {
   }
 }
 
+@media (width < 1025px) {
+  #welcome h1 {
+    font-size: 3.2rem;
+  }
+  #pricing h1 {
+    font-size: 3.2rem;
+  }
+  #clients h1 {
+    font-size: 3.2rem;
+  }
+  #faq h1 {
+    font-size: 3.2rem;
+  }
+  #contact h1 {
+    font-size: 3.2rem;
+  }
+}
+
 @media (width < 800px) {
   nav {
     padding: 0 5%;
@@ -783,9 +807,6 @@ nav p {
   nav p {
     font-size: 1rem;
   }
-  nav p:last-child {
-    display: none;
-  }
   .swiper-slide {
     height: 200px;
   }
@@ -802,5 +823,23 @@ nav p {
   }
   #disclaimer p {
     font-size: 0.8rem;
+  }
+}
+
+@media (width < 420px) {
+  #welcome h1 {
+    font-size: 2.5rem;
+  }
+  #pricing h1 {
+    font-size: 2.5rem;
+  }
+  #clients h1 {
+    font-size: 2.5rem;
+  }
+  #faq h1 {
+    font-size: 2.5rem;
+  }
+  #contact h1 {
+    font-size: 2.5rem;
   }
 }

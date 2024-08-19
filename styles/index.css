@@ -271,9 +271,11 @@ nav p {
 }
 
 .card h3 .discount {
-  color: var(--red);
+  background-color: var(--red);
+  color: var(--white);
   font-weight: var(--font-weight-light);
   margin-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .card button {

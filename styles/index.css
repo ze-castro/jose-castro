@@ -112,6 +112,16 @@ nav p {
   z-index: 2;
 }
 
+#welcome .links button {
+  cursor: pointer;
+}
+
+#welcome .links a:first-child {
+  color: var(--white);
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+}
+
 @keyframes animate {
   0% {
     background-position: 0%;
@@ -328,7 +338,7 @@ nav p {
   text-align: center;
 }
 
-#clients p {
+#clients>p {
   font-size: var(--font-size-subtitle);
   font-weight: var(--font-weight-light);
   margin-top: 0.7rem;
@@ -359,15 +369,18 @@ nav p {
 }
 
 .swiper-slide {
-  width: 350px;
-  height: 300px;
+  width: 300px;
+  height: 330px;
   background-color: var(--lighter-gray);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   border-radius: 0.7rem;
   position: relative;
   transition: var(--transition);
+  user-select: none;
 }
 
 .swiper-slide:hover {
@@ -393,9 +406,17 @@ nav p {
 }
 
 .swiper-slide img {
-  width: 70%;
+  width: 60%;
   object-fit: cover;
   cursor: pointer;
+}
+
+.swiper-slide p {
+  width: 100%;
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-light);
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .swiper-pagination {
@@ -610,7 +631,7 @@ nav p {
 
 @media (width < 1600px) {
   .swiper-slide {
-    height: 250px;
+    height: 280px;
   }
 }
 
@@ -742,7 +763,7 @@ nav p {
     height: 300px;
   }
   .swiper-slide img {
-    width: 60%;
+    width: 50%;
   }
   .swiper-button-prev,
   .swiper-button-next {
@@ -810,10 +831,10 @@ nav p {
     font-size: 1rem;
   }
   .swiper-slide {
-    height: 200px;
+    height: 250px;
   }
   .swiper-slide img {
-    width: 70%;
+    width: 60%;
   }
   #contact .contact-box a {
     font-size: 1.3rem;

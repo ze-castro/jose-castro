@@ -16,8 +16,6 @@ function updateYear() {
 }
 
 //// EVENT LISTENERS ////
-// onclick of the contact button
-document.getElementById('contact-btn').addEventListener('click', () => scrollToSection('contact'));
 // onclick of the learn more link
 document
   .getElementById('learn-more-link')

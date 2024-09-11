@@ -71,19 +71,19 @@ function sendEmail3() {
   var email = 'support@thewebsitebuilder.net';
   var subject = '💼 Orçamento | thewebsitebuilder.net';
   var body = `
-  💼 Pedido de Orçamento
-  ━━━━━━━━━━━━━━━━━━
-  
-  ➤ Nome: 
-  ➤ Contacto: 
-  
-  Mensagem:
-  ━━━━━━━━━
-  Olá, ...
-  
-  
-  ━━━━━━━━━━━━━━━━━━
-  📧 Enviado via thewebsitebuilder.net
+💼 Pedido de Orçamento
+━━━━━━━━━━━━━━━━━━
+
+➤ Nome: 
+➤ Contacto: 
+
+Mensagem:
+━━━━━━━━━
+Olá, ...
+
+
+━━━━━━━━━━━━━━━━━━
+📧 Enviado via thewebsitebuilder.net
     `
     .trim()
     .replace(/\n/g, '%0D%0A');

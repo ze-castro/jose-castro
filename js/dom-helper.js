@@ -11,16 +11,21 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 
-const elementsToObserve = ['.welcome-image', '.card', '.scheduling-container', '.me-container', '.swiper', '.box', '.contact-box']
+const elementsToObserve = [
+  '.welcome-image',
+  '.card',
+  '.scheduling-container',
+  '.me-container',
+  '.swiper',
+  '.box',
+  '.contact-box',
+]
   .flatMap((selector) =>
     selector.includes('.')
       ? Array.from(document.querySelectorAll(selector))
       : [document.querySelector(selector)]
   )
   .filter(Boolean);
-
-// verify if the elements are being observed
-console.log(elementsToObserve);
 
 elementsToObserve.forEach((el) => observer.observe(el));
 

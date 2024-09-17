@@ -12,6 +12,9 @@ function updateYear() {
 }
 
 //// EVENT LISTENERS ////
+//onlick in the contact button
+document.getElementById('contact-btn').addEventListener('click', () => sendEmailBudget());
+
 // onclick of the learn more link
 document
   .getElementById('learn-more-link')
@@ -66,10 +69,10 @@ Olá, gostaria de saber mais sobre a criação de uma loja online…
   window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);
 }
 
-document.getElementById('learn-more-btn-3').addEventListener('click', sendEmail3);
-function sendEmail3() {
+document.getElementById('learn-more-btn-3').addEventListener('click', sendEmailBudget);
+function sendEmailBudget() {
   var email = 'support@thewebsitebuilder.net';
-  var subject = '💼 Orçamento | thewebsitebuilder.net';
+  var subject = '💼 Pedido de Orçamento | thewebsitebuilder.net';
   var body = `
 💼 Pedido de Orçamento
 ━━━━━━━━━━━━━━━━━━
@@ -85,6 +88,34 @@ Olá, ...
 ━━━━━━━━━━━━━━━━━━
 📧 Enviado via thewebsitebuilder.net
     `
+    .trim()
+    .replace(/\n/g, '%0D%0A');
+  window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);
+}
+
+// onclick of the scheduling email
+document.getElementById('scheduling-email').addEventListener('click', () => sendEmailInfo());
+
+// onclick of the contact email
+document.getElementById('contact-email').addEventListener('click', () => sendEmailInfo());
+function sendEmailInfo() {
+  var email = 'support@thewebsitebuilder.net';
+  var subject = 'ℹ️ Pedido de Informação | thewebsitebuilder.net';
+  var body = `
+  ℹ️ Pedido de Informação
+  ━━━━━━━━━━━━━━━━━━
+  
+  ➤ Nome: 
+  ➤ Contacto: 
+  
+  Mensagem:
+  ━━━━━━━━━
+  Olá, ...
+  
+  
+  ━━━━━━━━━━━━━━━━━━
+  📧 Enviado via thewebsitebuilder.net
+      `
     .trim()
     .replace(/\n/g, '%0D%0A');
   window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);

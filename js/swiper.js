@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 15,
     slidesPerView: 1,
     autoplay: {
-      delay: 1000,
+      delay: 3000,
     },
     pagination: {
       el: '.swiper-pagination',

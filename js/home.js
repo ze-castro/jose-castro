@@ -45,30 +45,6 @@ Olá, ...
   window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);
 }
 
-document.getElementById('learn-more-btn-2').addEventListener('click', sendEmail2);
-function sendEmail2() {
-  var email = 'ze.castro@icloud.com';
-  var subject = '📦 Loja Online | The Website Builder';
-  var body = `
-📦 Criação de Loja Online
-━━━━━━━━━━━━━━━━━━
-
-➤ Nome: 
-➤ Contacto: 
-
-Mensagem:
-━━━━━━━━━
-Olá, ...
-
-
-━━━━━━━━━━━━━━━━━━
-📧 Enviado via website.
-  `
-    .trim()
-    .replace(/\n/g, '%0D%0A');
-  window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);
-}
-
 document.getElementById('learn-more-btn-3').addEventListener('click', sendEmailBudget);
 function sendEmailBudget() {
   var email = 'ze.castro@icloud.com';

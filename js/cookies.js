@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // detail the cookies we use in the website
-  console.log('%cCookies we use:', 'font-weight: bold; font-size: 1rem;');
-  console.log('');
-  console.log('%cGoogle Analytics', 'font-weight: bold; font-size: 0.8rem;');
+  console.log('%cCookies we use:', 'font-weight: bold; font-size: 1.2rem;');
+  console.log('\n');
+  console.log('%cMixpanel', 'font-weight: bold; font-size: 1.2rem;');
   console.log('https://policies.google.com/privacy');
-  console.log('We use Google Analytics to track the number of visitors of our website.');
-  console.log('');
-  console.log('%cLocal Storage', 'font-weight: bold; font-size: 0.8rem;');
+  console.log('We use Mixpanel to track the number of visitors of our website.');
+  console.log('\n');
+  console.log('%cLocal Storage', 'font-weight: bold; font-size: 1.2rem;');
   console.log(
     'We use local storage to store if the user has accepted the cookies previously, that way we do not show the cookies bar every time the user visits the website.'
   );
-  console.log('');
+  console.log('\n');
   console.log('We do not store any user data. Thank you for visiting our website!');
 });
 

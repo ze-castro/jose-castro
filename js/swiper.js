@@ -2,20 +2,31 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Carousel
   const swiper = new Swiper('.swiper', {
-    speed: 400,
+    // mouse control scroll
+    mousewheel: {
+      forceToAxis: true,
+      releaseOnEdges: true,
+    },
+    // keyboard control
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    loop: true,
+    speed: 1500,
     direction: 'horizontal',
     spaceBetween: 15,
     slidesPerView: 1,
     autoplay: {
-      delay: 3000,
+      delay: 0,
     },
     pagination: {
       el: '.swiper-pagination',
     },
     breakpoints: {
       800: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 5,
+        spaceBetween: 50,
       },
     },
   });

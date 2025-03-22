@@ -23,7 +23,7 @@ document
 // onclick in each service
 document.getElementById('learn-more-btn-1').addEventListener('click', sendEmail1);
 function sendEmail1() {
-  var email = 'support@thewebsitebuilder.net';
+  var email = 'ze.castro@icloud.com';
   var subject = '📂 Site | The Website Builder';
   var body = `
 📂 Criação de Site
@@ -47,7 +47,7 @@ Olá, ...
 
 document.getElementById('learn-more-btn-3').addEventListener('click', sendEmailBudget);
 function sendEmailBudget() {
-  var email = 'support@thewebsitebuilder.net';
+  var email = 'ze.castro@icloud.com';
   var subject = '💼 Pedido de Orçamento | The Website Builder';
   var body = `
 💼 Pedido de Orçamento
@@ -75,7 +75,7 @@ document.getElementById('scheduling-email').addEventListener('click', () => send
 // onclick of the contact email
 document.getElementById('contact-email').addEventListener('click', () => sendEmailInfo());
 function sendEmailInfo() {
-  var email = 'support@thewebsitebuilder.net';
+  var email = 'ze.castro@icloud.com';
   var subject = 'ℹ️ Pedido de Informação | The Website Builder';
   var body = `
   ℹ️ Pedido de Informação

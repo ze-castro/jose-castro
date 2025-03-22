@@ -376,10 +376,12 @@ nav p {
   position: relative;
   transition: var(--transition);
   user-select: none;
+  filter: drop-shadow(0 0.5rem 0.5rem var(--shadow));
 }
 
 .swiper-slide:hover {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(-2deg);
+  filter: drop-shadow(0 0.5rem 1rem var(--shadow));
 }
 
 .swiper-slide a {
@@ -393,17 +395,12 @@ nav p {
 }
 
 .swiper-slide a:hover {
-  cursor: grab;
-}
-
-.swiper-slide a:active {
-  cursor: grabbing;
+  cursor: pointer;
 }
 
 .swiper-slide img {
   width: 200px;
   object-fit: cover;
-  cursor: pointer;
 }
 
 .swiper-pagination {

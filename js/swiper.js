@@ -18,10 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 15,
     slidesPerView: 1,
     autoplay: {
-      delay: 0,
-    },
-    pagination: {
-      el: '.swiper-pagination',
+      delay: 100,
     },
     breakpoints: {
       800: {
@@ -30,6 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
+  // modal with info about the project
+  const modal = (title, description, link) => {
+    const modalHTML = `
+      <div class="project-modal">
+        <div class="project-modal-content">
+          <h2>${title}</h2>
+          <p>
+            ${description}
+          </p>
+          <a href="${link}" class="btn">View Project</a>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    // close modal
+    document.querySelector('.project-modal').addEventListener('click', () => {
+      document.querySelector('.project-modal').remove();
+    });
+  };
 
   // when user hovers over the carousel, stop the autoplay
   document.querySelector('.swiper').addEventListener('mouseenter', () => {

@@ -863,6 +863,7 @@ nav p {
   }
 
   #tools-link i {
+    transform: translateX(0.1rem);
     font-size: 1.2rem;
   }
 

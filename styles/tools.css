@@ -61,7 +61,7 @@ ul a {
   font-size: 1rem;
   text-align: center;
   font-weight: var(--font-weight-light);
-  color: var(--black) !important;
+  color: var(--dark-gray) !important;
   text-decoration: none !important;
   box-shadow: 0 0.5rem 1rem var(--light-shadow);
   transition: var(--transition);
@@ -69,10 +69,15 @@ ul a {
 ul a i {
   font-size: 2rem !important;
   color: var(--gray) !important;
+  transition: var(--transition);
 }
 ul a:hover {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.8rem 1rem var(--light-shadow);
+  color: var(--black) !important;
+}
+ul a:hover i {
+  color: var(--black) !important;
 }
 input[type='text'] {
   min-width: 480px;
@@ -124,5 +129,14 @@ button:hover {
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem 0;
+  }
+  ul a {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 0.7rem 1rem;
+  }
+  ul a i {
+    font-size: 1.5rem !important;
   }
 }

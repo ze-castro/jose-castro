@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="criação de sites, desenvolvimento web, design de sites, agência de web design, desenvolvimento de sites, e-commerce, plataforma de e-commerce, presença online, marketing digital, soluções web, website profissional, website personalizado, website responsivo, otimização para motores de busca, SEO, marketing de conteúdo, análise web, hospedagem de sites, domínio, certificado SSL, manutenção de sites, suporte técnico, criação de sites em Braga, desenvolvimento web em Portugal, agência de web design em Braga, sites para empresas em Braga, sites para empresas em Portugal, sites para negócios locais, sites para pequenas empresas, sites para startups, sites para profissionais, criação de sites para imobiliárias, criação de sites para construtoras, criação de sites para restaurantes, criação de sites para hotéis, criação de sites para advogados, criação de sites para médicos, website de alta performance, website seguro, website acessível, website otimizado para mobile, website personalizado para o seu negócio, website que vende, website que gera leads, website que aumenta a sua visibilidade online, website que melhora a sua reputação online, website que te ajuda a crescer o seu negócio, preciso de um site profissional, como ter um site para a minha empresa, qual a melhor plataforma para criar um site, quanto custa criar um site, agências de web design em Braga, desenvolvimento de sites personalizados, soluções de e-commerce para pequenas empresas, aumentar as vendas online, melhorar a experiência do cliente online, sites braga, fazer sites braga, sites portugal, site online portugal, sites online braga, construção de sites, preciso de um site, site para a minha empresa, sites de imobiliário, sites para o meu negócio"
+    />
+    <!-- title and description -->
+    <title>Gerador de Códigos QR</title>
+    <meta name="description" content="Gerador de códigos QR 100% gratuito." />
+    <!-- Apple Icon when save to phone -->
+    <link rel="apple-touch-icon" href="/assets/logo.webp" />
+    <!-- favicon -->
+    <link rel="icon" href="/assets/logo.ico" type="image/ico" />
+    <!-- styles -->
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <!-- scripts -->
+    <script type="module" src="/js/cookies.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <!-- analytics -->
+    <script defer src="/js/mixpanel.js"></script>
+    <style>
+      main {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        font-weight: var(--font-weight-semibold);
+        margin-bottom: 2rem;
+      }
+      input[type='text'] {
+        width: 300px;
+        padding: 0.5rem 1rem;
+        margin: 10px;
+        box-shadow: 0 0.3rem 1rem var(--light-shadow);
+      }
+      button {
+        padding: 0.5rem 1rem;
+        box-shadow: 0 0.5rem 1rem var(--shadow);
+      }
+      button:hover {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 1rem 1rem var(--light-shadow);
+      }
+
+      #qrCanvas {
+        width: 200px;
+        height: 200px;
+        margin: 2rem 0 1rem 0;
+      }
+
+      #qrCanvas canvas {
+        width: 100%;
+        height: 100%;
+        box-shadow: 1rem 1rem 2rem var(--shadow);
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        input[type='text'] {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="cookies">
+        <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
+        <button>Entendi</button>
+      </div>
+      <h1>Gerador de Códigos QR</h1>
+      <input type="text" id="linkInput" placeholder="Introduza o texto ou link aqui (ex: Teste)" />
+      <button onclick="generateQR()">Começar</button>
+      <div id="qrCanvas"></div>
+      <button id="downloadBtn" style="display: none" onclick="downloadQR()">
+        Download QR Code
+      </button>
+    </main>
+    <script>
+      let qrCodeDataUrl = null;
+
+      function generateQR() {
+        const link = document.getElementById('linkInput').value.trim();
+        if (!link) {
+          alert('Introduza um link ou texto para gerar o código QR.');
+          return;
+        }
+
+        // Clear previous QR code
+        document.getElementById('qrCanvas').innerHTML = '';
+
+        // Generate QR code
+        QRCode.toCanvas(link, { width: 200 }, function (error, canvas) {
+          if (error) {
+            console.error(error);
+            return;
+          }
+          document.getElementById('qrCanvas').appendChild(canvas);
+
+          // Get the data URL for downloading
+          qrCodeDataUrl = canvas.toDataURL('image/png');
+          document.getElementById('downloadBtn').style.display = 'block';
+        });
+      }
+
+      function downloadQR() {
+        if (!qrCodeDataUrl) return;
+
+        // Create a temporary link element to trigger download
+        const link = document.createElement('a');
+        link.href = qrCodeDataUrl;
+        link.download = 'qrcode.png'; // Filename for the download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </body>
+</html>

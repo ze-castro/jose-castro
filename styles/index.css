@@ -75,6 +75,29 @@ nav p {
   color: var(--white);
 }
 
+/* TOOLS LINK */
+#tools-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: var(--font-weight-light);
+  background-color: var(--lighter-gray);
+  color: var(--black);
+  border-radius: 1rem;
+  z-index: 2;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+#tools-link:hover {
+  background-color: var(--light-gray);
+}
+
 /* WELCOME */
 #welcome {
   width: 100%;
@@ -833,6 +856,14 @@ nav p {
   }
   nav p {
     font-size: 1.1rem;
+  }
+
+  #tools-link p {
+    display: none;
+  }
+
+  #tools-link i {
+    font-size: 1.2rem;
   }
 
   #welcome h1 {

@@ -19,60 +19,12 @@
     <!-- styles -->
     <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/tools.css" />
     <!-- scripts -->
     <script type="module" src="/js/cookies.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
     <!-- analytics -->
     <script defer src="/js/mixpanel.js"></script>
-    <style>
-      main {
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      h1 {
-        font-weight: var(--font-weight-semibold);
-        margin-bottom: 2rem;
-      }
-      input[type='text'] {
-        width: 300px;
-        padding: 0.5rem 1rem;
-        margin: 10px;
-        box-shadow: 0 0.3rem 1rem var(--light-shadow);
-      }
-      button {
-        padding: 0.5rem 1rem;
-        box-shadow: 0 0.5rem 1rem var(--shadow);
-      }
-      button:hover {
-        transform: translateY(-0.1rem);
-        box-shadow: 0 1rem 1rem var(--light-shadow);
-      }
-
-      #qrCanvas {
-        width: 200px;
-        height: 200px;
-        margin: 2rem 0 1rem 0;
-      }
-
-      #qrCanvas canvas {
-        width: 100%;
-        height: 100%;
-        box-shadow: 1rem 1rem 2rem var(--shadow);
-      }
-
-      @media (max-width: 500px) {
-        h1 {
-          font-size: 1.8rem;
-          margin-bottom: 1rem;
-        }
-        input[type='text'] {
-          width: 100%;
-        }
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -80,7 +32,13 @@
         <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
         <button>Entendi</button>
       </div>
+      <a id="back" href="/tools/">
+        <i class="fa fa-angle-left"></i> Voltar
+      </a>
       <h1>Gerador de Códigos QR</h1>
+      <p>
+        Insira o texto ou link que deseja converter em um código QR
+      </p>
       <input type="text" id="linkInput" placeholder="Introduza o texto ou link aqui (ex: Teste)" />
       <button onclick="generateQR()">Começar</button>
       <div id="qrCanvas"></div>

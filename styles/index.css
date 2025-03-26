@@ -80,14 +80,14 @@ nav p {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   font-weight: var(--font-weight-light);
   background-color: var(--lighter-gray);
-  color: var(--black);
+  color: var(--dark-gray);
   border-radius: 1rem;
   z-index: 2;
   text-decoration: none;

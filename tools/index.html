@@ -4,292 +4,44 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- keywords -->
-    <meta
-      name="keywords"
-      content="criação de sites, desenvolvimento web, design de sites, agência de web design, desenvolvimento de sites, e-commerce, plataforma de e-commerce, presença online, marketing digital, soluções web, website profissional, website personalizado, website responsivo, otimização para motores de busca, SEO, marketing de conteúdo, análise web, hospedagem de sites, domínio, certificado SSL, manutenção de sites, suporte técnico, criação de sites em Braga, desenvolvimento web em Portugal, agência de web design em Braga, sites para empresas em Braga, sites para empresas em Portugal, sites para negócios locais, sites para pequenas empresas, sites para startups, sites para profissionais, criação de sites para imobiliárias, criação de sites para construtoras, criação de sites para restaurantes, criação de sites para hotéis, criação de sites para advogados, criação de sites para médicos, website de alta performance, website seguro, website acessível, website otimizado para mobile, website personalizado para o seu negócio, website que vende, website que gera leads, website que aumenta a sua visibilidade online, website que melhora a sua reputação online, website que te ajuda a crescer o seu negócio, preciso de um site profissional, como ter um site para a minha empresa, qual a melhor plataforma para criar um site, quanto custa criar um site, agências de web design em Braga, desenvolvimento de sites personalizados, soluções de e-commerce para pequenas empresas, aumentar as vendas online, melhorar a experiência do cliente online, sites braga, fazer sites braga, sites portugal, site online portugal, sites online braga, construção de sites, preciso de um site, site para a minha empresa, sites de imobiliário, sites para o meu negócio"
-    />
     <!-- title and description -->
-    <title>Sites para Empresas e Pessoas</title>
-    <meta
-      name="description"
-      content="Sites adaptados às suas necessidades específicas, priorizando a privacidade e otimizando para o melhor desempenho."
-    />
+    <title>Caixa de Ferramentas</title>
+    <meta name="description" content="Uma coleção de ferramentas úteis para programadores web." />
     <!-- Apple Icon when save to phone -->
-    <link rel="apple-touch-icon" href="assets/logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/logo.webp" />
     <!-- favicon -->
-    <link rel="icon" href="assets/logo.ico" type="image/ico" />
+    <link rel="icon" href="/assets/logo.ico" type="image/ico" />
     <!-- styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/tools.css" />
     <!-- scripts -->
-    <script type="module" src="js/home.js"></script>
-    <script type="module" src="js/cookies.js"></script>
-    <script type="module" src="js/dom-helper.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/js/cookies.js"></script>
     <!-- analytics -->
     <script defer src="/js/mixpanel.js"></script>
   </head>
   <body>
-    <!-- <nav>
-      <h3>PROMOÇÃO:</h3>
-      <p>-20% em Sites</p>
-    </nav> -->
     <main>
       <div id="cookies">
         <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
         <button>Entendi</button>
       </div>
-      <section id="welcome">
-        <div class="logo">
-          <img src="assets/logo.webp" alt="logo" />
-          <h4>jose-castro</h4>
-        </div>
-        <h1>Criação de Sites Profissionais para Empresas e Pessoas</h1>
-        <p>A partir de <span class="prices">199</span><span class="currency">€</span>*</p>
-        <div class="links">
-          <span class="btn-and-animation">
-            <button id="contact-btn">Contacto</button>
-            <span class="btn-animation"></span>
-          </span>
-          <a id="learn-more-link">Saiba mais ></a>
-        </div>
-        <img class="welcome-image" src="assets/welcome.webp" alt="welcome-image" />
-      </section>
-      <section id="pricing">
-        <h1>Comece Agora</h1>
-        <p>Os preços abaixo não incluem IVA*</p>
-        <div class="pricing-cards">
-          <div class="card">
-            <div class="card-left">
-              <h2>Site Profissional</h2>
-              <ul>
-                <li>
-                  O essencial para divulgar o seu negócio na internet, incluindo várias páginas, um
-                  domínio personalizado e uma conta de email profissional.
-                </li>
-              </ul>
-              <h3>
-                A partir de <span class="prices">199</span><span class="currency">€</span>
-                <!-- <span class="discount">-20%</span> -->
-                <p>+ 5,90€ /mês</p>
-              </h3>
-              <button id="learn-more-btn-1">Começe Agora</button>
-            </div>
-            <div class="card-right" id="simple-website">
-              <img src="assets/simple-website.webp" alt="simple-website" loading="lazy" />
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-right">
-              <h2>Soluções Personalizadas</h2>
-              <ul>
-                <li>
-                  Se tem uma ideia específica para uma plataforma, entre em contato comigo para
-                  discutir as suas necessidades e obter um orçamento personalizado.
-                </li>
-              </ul>
-              <h3>Orçamento à sua medida</h3>
-              <button id="learn-more-btn-3">Peça Agora</button>
-            </div>
-            <div class="card-right" id="personalized-software">
-              <img
-                src="assets/personalized-software.webp"
-                alt="personalized-software"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="clients">
-        <h1>Com quem trabalhei?</h1>
-        <p>Clientes que confiam no meu trabalho</p>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="https://www.ementify.com" target="_blank" rel="noopener noreferrer"></a>
-              <img src="assets/menu-ementify.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a href="https://marioduka.com/" target="_blank" rel="noopener noreferrer"></a>
-              <img src="assets/marioduka.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a href="https://jotaautodetail.com/" target="_blank" rel="noopener noreferrer"></a>
-              <img src="assets/jotaautodetail.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a href="https://luizaseabra.pt/" target="_blank" rel="noopener noreferrer"></a>
-              <img src="assets/luizaseabra.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a
-                href="https://brandboostmedia-pt.onrender.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-              <img src="assets/brandboostmedia.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a
-                href="https://exclusivecardetail.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-              <img src="assets/exclusive-car-detail.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a
-                href="https://jasmimdesignfloral.pt/"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-              <img src="assets/jasmimdesignfloral.webp" alt="website" />
-            </div>
-            <div class="swiper-slide">
-              <a
-                onclick="alert('PROJETO PRIVADO. Construção de um sistema de testes de terapia da fala.')"
-              ></a>
-              <img src="assets/happies.webp" alt="website" />
-            </div>
-            <!-- <div class="swiper-slide">
-              <a
-                onclick="alert('PROJETO PRIVADO. Construção de um sistema de controlo de defeitos de produto.')"
-              ></a>
-              <img src="assets/brandsleaders.webp" alt="website" />
-            </div> -->
-            <!-- <div class="swiper-slide">
-              <a
-                onclick="alert('PROJETO PRIVADO. Construção de um sistema de gestão de projetos.')"
-              ></a>
-              <img src="assets/darkstyle.webp" alt="website" />
-            </div> -->
-          </div>
-          <!-- <div class="swiper-pagination"></div> -->
-        </div>
-      </section>
-      <section id="scheduling">
-        <h1>Precisa de mais informação?</h1>
-        <p>Reuna comigo para discutir as suas necessidades</p>
-        <div class="scheduling-container">
-          <button class="scheduling-button">
-            <a
-              href="https://calendly.com/jose-castro-dev/esclarecimentos"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fa fa-phone"></i>Agende uma Chamada</a
-            >
-          </button>
-          <p id="scheduling-email"><i class="fa fa-email"></i>em alternativa, envie-me um email</p>
-        </div>
-      </section>
-      <section id="me">
-        <h1>Quem sou eu?</h1>
-        <p>Conheça quem cria os sites que vê aqui</p>
-        <div class="me-container">
-          <div class="me-image">
-            <img src="assets/me.webp" alt="me" />
-          </div>
-          <div class="me-description">
-            <h2>Olá, o meu nome é José Castro</h2>
-            <p>
-              Sou um Web Dev com mais de 2 anos de experiência em desenvolvimento web. O meu
-              objetivo é ajudar empresas e pessoas a informatizarem a sua empresa, com sites,
-              softwares personalizados e outros.
-            </p>
-            <p>
-              Se procura um site ou software à medida que se destaca, entre em contato comigo para
-              discutirmos as suas necessidades e obtenha um orçamento ainda hoje.
-            </p>
-            <a
-              href="https://calendly.com/jose-castro-dev/esclarecimentos"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fa fa-phone"></i>Agende uma Chamada</a
-            >
-          </div>
-        </div>
-      </section>
-      <section id="faq">
-        <h1>Perguntas Frequentes</h1>
-        <p>Algumas das perguntas mais comuns que recebo</p>
-        <div class="faq-container">
-          <div class="box">
-            <h2 class="box-title">O que é o José Castro?</h2>
-            <p class="box-description">
-              O José Castro* é um projeto de desenvolvimento web que oferece serviços de criação de
-              sites, software personalizado e outros, com foco em privacidade e performance.
-            </p>
-          </div>
-          <div class="box">
-            <h2 class="box-title">Fornece serviços de otimização de pesquisa (SEO)?</h2>
-            <p class="box-description">
-              Sim, todos os sites que crio são projetados com as melhores práticas de SEO para
-              melhorar a visibilidade do seu site nos motores de pesquisa. A minha estratégia inclui
-              utilização de palavras-chave, otimização de desempenho e utilização de backlinks (se
-              possível) de forma a melhorar o ranking do seu site.
-            </p>
-          </div>
-          <div class="box">
-            <h2 class="box-title">Quanto tempo terei que esperar pelo meu projeto?</h2>
-            <p class="box-description">
-              O tempo de construção do site depende do tamanho e da complexidade do projeto. No
-              entanto, a maioria dos sites são concluídos entre 1-4 semanas. Para projetos
-              personalizados, o tempo de construção pode ser maior.
-            </p>
-          </div>
-          <div class="box">
-            <h2 class="box-title">Como mantenho o meu site sempre seguro?</h2>
-            <p class="box-description">
-              Para garantir a segurança do seu site, utilizo as plataformas com melhor práticas no
-              mercado de hosting, além de backups recorrentes e atualizações de segurança.
-            </p>
-          </div>
-          <div class="box">
-            <h2 class="box-title">
-              E se eu precisar de alterar alguma coisa depois do site ser lançado?
-            </h2>
-            <p class="box-description">
-              Após o lançamento do site, atualizações de segurança e correção de bugs são gratuitas.
-              Se precisar de alterar o conteúdo do site, as alterações são cotadas à hora de tempo
-              gasto (12.5€ por hora). Geralmente, alterações de conteúdo são feitas entre 1-2 horas
-              dependendo do conteúdo a adicionar.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="contact">
-        <h1>Vamos falar?</h1>
-        <p>Envie-me uma mensagem e entrarei em contato o mais breve possível</p>
-        <div class="contact-box">
-          <p id="contact-email"><i class="fa fa-mouse-pointer"></i>ze.castro@icloud.com</p>
-        </div>
-      </section>
-      <section id="disclaimer">
-        <p>
-          *Todos os preços apresentados são meramente indicativos e podem variar consoante a
-          complexidade do projeto. Para obter um orçamento, entre em contato comigo.
-        </p>
-        <p>
-          **Os sites apresentados são projetos reais desenvolvidos por José Castro e não podem ser
-          copiados ou reproduzidos sem autorização por escrito.
-        </p>
-        <p>
-          ***José Castro é um programador web registado como trabalhador independente. Caso
-          necessite de fatura, esta será emitida como tal.
-        </p>
-        <p>
-          Para mais informações sobre a política de privacidade e cookies, por favor consulte os
-          nossos <a href="terms.html">Termos & Condições</a>.
-        </p>
-      </section>
+      <a id="back" href="/">
+        <i class="fa fa-angle-left"></i> Voltar
+      </a>
+      <h1>Caixa de Ferramentas</h1>
+      <p>Uma coleção de ferramentas úteis para programadores web</p>
+      <ul>
+        <a href="/tools/qr-code.html">
+          <i class="fa fa-qrcode"></i> Gerador de QR Code
+        </a>
+        <a href="https://image-utility.onrender.com/">
+          <i class="fa fa-exchange"></i> Conversor de Imagens
+        </a>
+        <a href="https://image-utility.onrender.com/">
+          <i class="fa fa-compress"></i> Compressor de Imagens
+        </a>
+      </ul>
     </main>
-    <footer>
-      <p>©<span id="year">2024</span> José Castro</p>
-    </footer>
   </body>
 </html>

@@ -36,7 +36,7 @@ function toggleDescription(box) {
 
   // add border-top to all boxes
   boxes.forEach((b) => {
-    b.style.borderTop = '1px solid var(--light-gray)';
+    b.style.borderTop = '1px solid var(--gray-2)';
   });
 
   // check if the box is expanded

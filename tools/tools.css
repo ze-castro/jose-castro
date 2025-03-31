@@ -15,27 +15,27 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
-  font-weight: var(--font-weight-light);
-  background-color: var(--lighter-gray);
-  color: var(--dark-gray);
+  font-weight: var(--light);
+  background-color: var(--gray-1);
+  color: var(--gray-5);
   border-radius: 1rem;
   z-index: 2;
   text-decoration: none;
-  transition: var(--transition);
+  transition: var(--steady);
 }
 
 #back:hover {
-  background-color: var(--light-gray);
+  background-color: var(--gray-2);
 }
 h1 {
-  font-size: var(--font-size-title);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--title);
+  font-weight: var(--bold);
   text-align: center;
 }
 p {
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-light);
-  color: var(--dark-gray);
+  font-size: var(--paragraph);
+  font-weight: var(--light);
+  color: var(--gray-5);
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -60,20 +60,20 @@ ul a {
   border-radius: 1rem;
   font-size: 1rem;
   text-align: center;
-  font-weight: var(--font-weight-light);
-  color: var(--dark-gray) !important;
+  font-weight: var(--light);
+  color: var(--gray-5) !important;
   text-decoration: none !important;
-  box-shadow: 0 0.5rem 1rem var(--light-shadow);
-  transition: var(--transition);
+  box-shadow: 0 0.5rem 1rem var(--shadow-1);
+  transition: var(--steady);
 }
 ul a i {
   font-size: 2rem !important;
-  color: var(--gray) !important;
-  transition: var(--transition);
+  color: var(--gray-3) !important;
+  transition: var(--steady);
 }
 ul a:hover {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.8rem 1rem var(--light-shadow);
+  box-shadow: 0 0.8rem 1rem var(--shadow-1);
   color: var(--black) !important;
 }
 ul a:hover i {
@@ -85,20 +85,20 @@ input[type='text'] {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 0.3rem 1rem var(--light-shadow);
+  box-shadow: 0 0.3rem 1rem var(--shadow-1);
 }
 button {
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  box-shadow: 0 0.5rem 1rem var(--shadow);
+  box-shadow: 0 0.5rem 1rem var(--shadow-2);
 }
 button:hover {
   transform: translateY(-0.1rem);
-  box-shadow: 0 1rem 1rem var(--light-shadow);
+  box-shadow: 0 1rem 1rem var(--shadow-1);
 }
 button:disabled {
-  background-color: var(--gray);
-  color: var(--dark-gray);
+  background-color: var(--gray-3);
+  color: var(--gray-5);
   cursor: not-allowed;
   box-shadow: none;
 }

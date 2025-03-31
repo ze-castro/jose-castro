@@ -2,58 +2,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 :root {
   /* MUTED COLORS */
-  --white: #fff;
-  --whitesmoke: #f5f5f5;
-  --lighter-gray: #eaeaea;
-  --light-gray: #dedede;
-  --gray: #b4b4b4;
-  --grayish: #676767;
-  --dark-gray: #434343;
+  --white: #fdfdfd;
+  --gray-1: #f5f5f5;
+  --gray-2: #dedede;
+  --gray-3: #b4b4b4;
+  --gray-4: #676767;
+  --gray-5: #434343;
   --black: #1d1d1f;
 
   /* COLORS */
   --green: #288d52;
+  --light-green: #3dbf6d;
   --red: #be3939;
   --yellow: #f5c518;
-  --orange: #fc6e51;
+  --orange: #e46248;
   --blue: #0071e3;
-  --transparent-blue: #0071e34b;
   --light-blue: #00a0e3;
   --purple: #ac92ec;
-  --paper: #e5e2ce;
-  --darkened-paper: #d1cfc1;
-  --darker-paper: #c4c2b5;
+  --pink: #f7a8b8;
+
+  /* TRANSPARENT COLORS */
+  --transparent-blue: #0071e34b;
   --transparent: transparent;
-  --darkened-background: rgba(0, 0, 0, 0.5);
-  --dark-shadow: rgba(0, 0, 0, 0.3);
-  --shadow: rgba(0, 0, 0, 0.2);
-  --light-shadow: rgba(0, 0, 0, 0.1);
+
+  /* TRANSPARENT BACKGROUND */
+  --transparent-background-1: rgba(255, 255, 255, 0.1);
+  --transparent-background-2: rgba(255, 255, 255, 0.2);
+  --transparent-background-3: rgba(255, 255, 255, 0.4);
+  --transparent-background-4: rgba(255, 255, 255, 0.6);
+  --transparent-background-5: rgba(255, 255, 255, 0.8);
+
+  /* SHADOWS */
+  --shadow-1: rgba(0, 0, 0, 0.1);
+  --shadow-2: rgba(0, 0, 0, 0.2);
+  --shadow-3: rgba(0, 0, 0, 0.3);
 
   /* FONTS */
-  --font-family: 'SFPro', sans-serif;
+  --font-1: 'SFPro', sans-serif;
+
   /* FONT SIZES */
-  --font-size-title: 4rem;
-  --font-size-subtitle: 1.3rem;
-  --font-size-text: 1.1rem;
-  --font-size-small: 0.9rem;
-  --font-size-email: 2rem;
-  --font-size-faq: 1.7rem;
+  --title: 4rem;
+  --subtitle: 1.3rem;
+  --paragraph: 1.1rem;
+  --microcopy: 0.9rem;
+  --email: 2rem;
+  --faq: 1.7rem;
+
   /* FONT WEIGHTS */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-semibold: 500;
-  --font-weight-bold: 600;
-  --font-weight-bolder: 700;
+  --thin: 200;
+  --light: 300;
+  --regular: 400;
+  --semi-bold: 500;
+  --bold: 600;
+  --heavy: 700;
 
   /* BORDER RADIUS */
-  --border-radius-button: 10rem;
-  --border-radius-input: 0.7rem;
+  --radius-1: 10rem;
+  --radius-2: 2rem;
+  --radius-3: 1rem;
+  --radius-4: 0.5rem;
 
   /* TRANSITIONS */
-  --fast-transition: 0.1s;
-  --transition: 0.3s;
-  --loading-transition: 1s;
-  --slow-transition: 0.5s;
+  --loading: 1s;
+  --slow: 0.5s;
+  --steady: 0.3s;
+  --fast: 0.1s;
 
   /* TEXT SPACING */
   --line-height: 1.3;
@@ -69,11 +82,11 @@
 /* DEFAULTS */
 
 body {
-  background-color: var(--whitesmoke);
+  background-color: var(--gray-1);
   scroll-behavior: smooth;
-  font-family: var(--font-family);
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--font-1);
+  font-size: var(--paragraph);
+  font-weight: var(--regular);
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
   color: var(--black);
@@ -85,15 +98,15 @@ main {
 }
 
 button {
-  border-radius: var(--border-radius-button);
+  border-radius: var(--radius-1);
   outline: none;
   border: none;
   cursor: pointer;
-  transition: var(--transition);
+  transition: var(--steady);
   color: var(--white);
   background-color: var(--black);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-light);
+  font-family: var(--font-1);
+  font-weight: var(--light);
 }
 
 del {
@@ -119,39 +132,39 @@ ul {
 input {
   outline: none;
   border: 1px solid rgba(224, 224, 224, 0.5);
-  border-radius: var(--border-radius-input);
-  font-weight: var(--font-weight-regular);
+  border-radius: var(--radius-4);
+  font-weight: var(--regular);
   padding: 0 1rem;
-  font-family: var(--font-family);
-  transition: var(--transition);
+  font-family: var(--font-1);
+  transition: var(--steady);
 }
 
 input:focus-visible {
-  transition: var(--transition);
+  transition: var(--steady);
   box-shadow: 0 0 0 0.1rem var(--transparent-blue);
 }
 
 textarea {
   outline: none;
   border: 1px solid rgba(224, 224, 224, 0.5);
-  border-radius: var(--border-radius-input);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family);
-  transition: var(--transition);
+  border-radius: var(--radius-4);
+  font-weight: var(--regular);
+  font-family: var(--font-1);
+  transition: var(--steady);
 }
 
 textarea:focus-visible {
-  transition: var(--transition);
+  transition: var(--steady);
   box-shadow: 0 0 0 0.1rem var(--transparent-blue);
 }
 
 select {
   outline: none;
   border: 1px solid rgba(224, 224, 224, 0.5);
-  border-radius: var(--border-radius-input);
-  font-weight: var(--font-weight-regular);
-  font-family: var(--font-family);
-  transition: var(--transition);
+  border-radius: var(--radius-4);
+  font-weight: var(--regular);
+  font-family: var(--font-1);
+  transition: var(--steady);
 }
 
 /* COOKIES */
@@ -172,21 +185,21 @@ select {
   transform: translate(-50%, 0);
   z-index: 4;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-  transition: var(--transition);
+  transition: var(--steady);
 }
 
 #cookies p {
   width: 500px;
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-light);
+  font-size: var(--paragraph);
+  font-weight: var(--light);
   color: var(--black);
 }
 
 #cookies button {
   min-width: 100px;
   height: 40px;
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-light);
+  font-size: var(--paragraph);
+  font-weight: var(--light);
   color: var(--white);
   background-color: var(--blue);
 }
@@ -205,7 +218,7 @@ footer {
 
 footer p {
   font-size: 1.1rem;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--light);
   text-align: center;
   color: var(--white);
 }

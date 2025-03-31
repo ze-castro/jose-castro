@@ -82,7 +82,7 @@
 /* DEFAULTS */
 
 body {
-  background-color: var(--gray-1);
+  background-color: var(--white);
   scroll-behavior: smooth;
   font-family: var(--font-1);
   font-size: var(--paragraph);

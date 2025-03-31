@@ -145,6 +145,15 @@ textarea:focus-visible {
   box-shadow: 0 0 0 0.1rem var(--transparent-blue);
 }
 
+select {
+  outline: none;
+  border: 1px solid rgba(224, 224, 224, 0.5);
+  border-radius: var(--border-radius-input);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family);
+  transition: var(--transition);
+}
+
 /* COOKIES */
 #cookies {
   width: auto;

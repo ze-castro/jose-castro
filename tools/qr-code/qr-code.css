@@ -1,0 +1,12 @@
+/* QR CODE */
+#qrCanvas {
+  width: 200px;
+  height: 200px;
+  margin: 2rem 0 1rem 0;
+}
+
+#qrCanvas canvas {
+  width: 100%;
+  height: 100%;
+  box-shadow: 1rem 1rem 2rem var(--shadow);
+}

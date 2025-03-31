@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/tools.css" />
+    <link rel="stylesheet" href="/tools/qr-code/qr-code.css" />
     <!-- scripts -->
-    <script type="module" src="/js/cookies.js"></script>
+    <script defer src="/tools/qr-code/qr-code.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
     <!-- analytics -->
     <script defer src="/js/mixpanel.js"></script>
@@ -42,44 +43,5 @@
         Download QR Code
       </button>
     </main>
-    <script>
-      let qrCodeDataUrl = null;
-
-      function generateQR() {
-        const link = document.getElementById('linkInput').value.trim();
-        if (!link) {
-          alert('Introduza um link ou texto para gerar o código QR.');
-          return;
-        }
-
-        // Clear previous QR code
-        document.getElementById('qrCanvas').innerHTML = '';
-
-        // Generate QR code
-        QRCode.toCanvas(link, { width: 200 }, function (error, canvas) {
-          if (error) {
-            console.error(error);
-            return;
-          }
-          document.getElementById('qrCanvas').appendChild(canvas);
-
-          // Get the data URL for downloading
-          qrCodeDataUrl = canvas.toDataURL('image/png');
-          document.getElementById('downloadBtn').style.display = 'block';
-        });
-      }
-
-      function downloadQR() {
-        if (!qrCodeDataUrl) return;
-
-        // Create a temporary link element to trigger download
-        const link = document.createElement('a');
-        link.href = qrCodeDataUrl;
-        link.download = 'qrcode.png'; // Filename for the download
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-    </script>
   </body>
 </html>

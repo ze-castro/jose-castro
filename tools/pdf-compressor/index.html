@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="criação de sites, desenvolvimento web, design de sites, agência de web design, desenvolvimento de sites, e-commerce, plataforma de e-commerce, presença online, marketing digital, soluções web, website profissional, website personalizado, website responsivo, otimização para motores de busca, SEO, marketing de conteúdo, análise web, hospedagem de sites, domínio, certificado SSL, manutenção de sites, suporte técnico, criação de sites em Braga, desenvolvimento web em Portugal, agência de web design em Braga, sites para empresas em Braga, sites para empresas em Portugal, sites para negócios locais, sites para pequenas empresas, sites para startups, sites para profissionais, criação de sites para imobiliárias, criação de sites para construtoras, criação de sites para restaurantes, criação de sites para hotéis, criação de sites para advogados, criação de sites para médicos, website de alta performance, website seguro, website acessível, website otimizado para mobile, website personalizado para o seu negócio, website que vende, website que gera leads, website que aumenta a sua visibilidade online, website que melhora a sua reputação online, website que te ajuda a crescer o seu negócio, preciso de um site profissional, como ter um site para a minha empresa, qual a melhor plataforma para criar um site, quanto custa criar um site, agências de web design em Braga, desenvolvimento de sites personalizados, soluções de e-commerce para pequenas empresas, aumentar as vendas online, melhorar a experiência do cliente online, sites braga, fazer sites braga, sites portugal, site online portugal, sites online braga, construção de sites, preciso de um site, site para a minha empresa, sites de imobiliário, sites para o meu negócio"
+    />
+    <!-- title and description -->
+    <title>Compressor de PDF</title>
+    <meta name="description" content="Compressor de PDF 100% gratuito." />
+    <!-- Apple Icon when save to phone -->
+    <link rel="apple-touch-icon" href="/assets/logo.webp" />
+    <!-- favicon -->
+    <link rel="icon" href="/assets/logo.ico" type="image/ico" />
+    <!-- styles -->
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/tools.css" />
+    <link rel="stylesheet" href="/tools/pdf-compressor/pdf-compressor.css" />
+    <!-- scripts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.10.111/build/pdf.min.js"></script>
+    <script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script defer src="/tools/pdf-compressor/pdf-compressor.js"></script>
+    <!-- analytics -->
+    <script defer src="/js/mixpanel.js"></script>
+  </head>
+  <body>
+    <main>
+      <a id="back" href="/tools/"> <i class="fa fa-angle-left"></i> Voltar </a>
+      <h1>Compressor de PDF</h1>
+      <p>Comprima o seu PDF sem perder qualidade.</p>
+      <div class="dropzone" id="dropzone">
+        <p>Arraste e solte o seu arquivo PDF aqui ou clique para selecionar um arquivo.</p>
+      </div>
+
+      <input type="file" id="fileInput" class="file-input" accept=".pdf" />
+
+      <div class="settings">
+        <label for="quality">Image Quality (Lower = Smaller File):</label>
+        <input type="range" id="imageQuality" min="1" max="100" value="50" />
+        <span id="imageQualityValue">50%</span>
+
+        <label for="dpi">Image Resolution (DPI):</label>
+        <select id="dpi">
+          <option value="300">300 DPI (Print Quality)</option>
+          <option value="150" selected>150 DPI (Good Quality)</option>
+          <option value="96">96 DPI (Screen Quality)</option>
+          <option value="72">72 DPI (Low Quality)</option>
+        </select>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="grayscale" checked />
+          <label for="grayscale">Convert Images to Grayscale</label>
+        </div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="removeMetadata" checked />
+          <label for="removeMetadata">Remove Metadata</label>
+        </div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="compressText" checked />
+          <label for="compressText">Compress Text & Fonts</label>
+        </div>
+      </div>
+
+      <button id="compressBtn" disabled>Compress PDF</button>
+
+      <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="file-info">
+          <div>
+            <strong>Original Size</strong>
+            <span id="originalSize">0 KB</span>
+          </div>
+          <div>
+            <strong>Compressed Size</strong>
+            <span id="compressedSize">0 KB</span>
+          </div>
+          <div>
+            <strong>Reduction</strong>
+            <span id="reduction">0%</span>
+          </div>
+        </div>
+
+        <button id="downloadBtn" class="download-btn">Download Compressed PDF</button>
+      </div>
+
+      <div class="log" id="log"></div>
+    </main>
+  </body>
+</html>

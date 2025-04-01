@@ -765,7 +765,7 @@ nav p {
   font-size: var(--email);
   font-weight: var(--light);
   color: var(--black);
-  background-color: var(--white);
+  background-color: var(--gray-1);
   padding: 1rem 2rem;
   border-radius: 1rem;
   text-decoration: none;

@@ -860,17 +860,18 @@ nav p {
   }
 
   #tools-link {
-    padding: 0.7rem 1.1rem;
+    display: none;
+    /* padding: 0.7rem 1.1rem; */
   }
 
-  #tools-link p {
+  /* #tools-link p {
     display: none;
   }
 
   #tools-link i {
     transform: translateX(0.1rem);
     font-size: 1.2rem;
-  }
+  } */
 
   #welcome h1 {
     width: 95%;

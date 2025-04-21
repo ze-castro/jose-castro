@@ -7,25 +7,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = document.getElementById('result');
   const outputFormat = document.getElementById('output');
   const imageContainer = document.getElementById('image-container');
+  const fileInputLabel = document.querySelector('.file-input-label'); // Add this for drag area
 
   // Arrays to store loaded images and converted image URLs
   let originalImages = [];
   let convertedImageUrls = [];
 
-  // Handle file input changes (when user selects images)
-  fileInput.addEventListener('change', (e) => {
-    const files = Array.from(e.target.files);
-    if (!files.length) return;
+  // --- Drag and Drop Support ---
+  // Highlight drop area on drag over
+  fileInputLabel.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    fileInputLabel.classList.add('dragover');
+  });
+  fileInputLabel.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    fileInputLabel.classList.remove('dragover');
+  });
+  fileInputLabel.addEventListener('drop', (e) => {
+    e.preventDefault();
+    fileInputLabel.classList.remove('dragover');
+    const files = Array.from(e.dataTransfer.files).filter(file =>
+      file.type.startsWith('image/')
+    );
+    if (files.length) {
+      fileInput.files = createFileList(files); // Set files to input for consistency
+      handleFiles(files);
+    }
+  });
 
-    // Reset state and UI
+  // Helper to create a FileList from array (for compatibility)
+  function createFileList(files) {
+    const dataTransfer = new DataTransfer();
+    files.forEach(file => dataTransfer.items.add(file));
+    return dataTransfer.files;
+  }
+
+  // Unified file handler for both input and drop
+  function handleFiles(files) {
+    if (!files.length) return;
     originalImages = [];
     imageContainer.innerHTML = '';
     convertBtn.disabled = true;
     convertedImageUrls = [];
     result.innerHTML = '';
+    downloadBtn.style.display = 'none';
 
     let loadedCount = 0;
-    // Read each file as a DataURL and create an Image object
     files.forEach((file, idx) => {
       const reader = new FileReader();
       reader.onload = (event) => {
@@ -33,10 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         img.onload = () => {
           originalImages[idx] = img;
           loadedCount++;
-          // Show image preview in the container
           imageContainer.style.display = 'flex';
           imageContainer.appendChild(img.cloneNode());
-          // Enable convert button when all images are loaded
           if (loadedCount === files.length) {
             imageContainer.style.display = 'flex';
             convertBtn.disabled = false;
@@ -46,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       reader.readAsDataURL(file);
     });
+  }
+
+  // Handle file input changes (when user selects images)
+  fileInput.addEventListener('change', (e) => {
+    handleFiles(Array.from(e.target.files));
   });
 
   // Handle conversion button click

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="criação de sites, desenvolvimento web, design de sites, agência de web design, desenvolvimento de sites, e-commerce, plataforma de e-commerce, presença online, marketing digital, soluções web, website profissional, website personalizado, website responsivo, otimização para motores de busca, SEO, marketing de conteúdo, análise web, hospedagem de sites, domínio, certificado SSL, manutenção de sites, suporte técnico, criação de sites em Braga, desenvolvimento web em Portugal, agência de web design em Braga, sites para empresas em Braga, sites para empresas em Portugal, sites para negócios locais, sites para pequenas empresas, sites para startups, sites para profissionais, criação de sites para imobiliárias, criação de sites para construtoras, criação de sites para restaurantes, criação de sites para hotéis, criação de sites para advogados, criação de sites para médicos, website de alta performance, website seguro, website acessível, website otimizado para mobile, website personalizado para o seu negócio, website que vende, website que gera leads, website que aumenta a sua visibilidade online, website que melhora a sua reputação online, website que te ajuda a crescer o seu negócio, preciso de um site profissional, como ter um site para a minha empresa, qual a melhor plataforma para criar um site, quanto custa criar um site, agências de web design em Braga, desenvolvimento de sites personalizados, soluções de e-commerce para pequenas empresas, aumentar as vendas online, melhorar a experiência do cliente online, sites braga, fazer sites braga, sites portugal, site online portugal, sites online braga, construção de sites, preciso de um site, site para a minha empresa, sites de imobiliário, sites para o meu negócio"
+    />
+    <!-- title and description -->
+    <title>Comparador de Texto</title>
+    <meta name="description" content="Comparador de Texto 100% gratuito." />
+    <!-- Apple Icon when save to phone -->
+    <link rel="apple-touch-icon" href="/assets/logo.webp" />
+    <!-- favicon -->
+    <link rel="icon" href="/assets/logo.ico" type="image/ico" />
+    <!-- styles -->
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/styles/defaults.css" />
+    <link rel="stylesheet" href="/tools/tools.css" />
+    <link rel="stylesheet" href="/tools/text-comparison/text-comparison.css" />
+    <!-- scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.min.js"></script>
+    <script defer src="/tools/text-comparison/text-comparison.js"></script>
+    <!-- analytics -->
+    <script defer src="/js/mixpanel.js"></script>
+  </head>
+  <body>
+    <main>
+      <a id="back" href="/tools/"> <i class="fa fa-angle-left"></i> Voltar </a>
+      <h1>Comparador de Texto</h1>
+      <p>Compara dois textos e mostra a diferença entre eles.</p>
+
+      <div class="text-container">
+        <textarea id="text1" placeholder="Texto 1"></textarea>
+        <textarea id="text2" placeholder="Texto 2"></textarea>
+        <div class="buttons">
+          <button id="compare-btn">Comparar</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </div>
+
+      <div id="legend">
+        <p>🟢 Texto 1</p>
+        <p>🔴 Texto 2</p>
+      </div>
+
+      <div class="result" id="result"></div>
+    </main>
+  </body>
+</html>

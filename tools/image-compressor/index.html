@@ -10,8 +10,8 @@
       content="criação de sites, desenvolvimento web, design de sites, agência de web design, desenvolvimento de sites, e-commerce, plataforma de e-commerce, presença online, marketing digital, soluções web, website profissional, website personalizado, website responsivo, otimização para motores de busca, SEO, marketing de conteúdo, análise web, hospedagem de sites, domínio, certificado SSL, manutenção de sites, suporte técnico, criação de sites em Braga, desenvolvimento web em Portugal, agência de web design em Braga, sites para empresas em Braga, sites para empresas em Portugal, sites para negócios locais, sites para pequenas empresas, sites para startups, sites para profissionais, criação de sites para imobiliárias, criação de sites para construtoras, criação de sites para restaurantes, criação de sites para hotéis, criação de sites para advogados, criação de sites para médicos, website de alta performance, website seguro, website acessível, website otimizado para mobile, website personalizado para o seu negócio, website que vende, website que gera leads, website que aumenta a sua visibilidade online, website que melhora a sua reputação online, website que te ajuda a crescer o seu negócio, preciso de um site profissional, como ter um site para a minha empresa, qual a melhor plataforma para criar um site, quanto custa criar um site, agências de web design em Braga, desenvolvimento de sites personalizados, soluções de e-commerce para pequenas empresas, aumentar as vendas online, melhorar a experiência do cliente online, sites braga, fazer sites braga, sites portugal, site online portugal, sites online braga, construção de sites, preciso de um site, site para a minha empresa, sites de imobiliário, sites para o meu negócio"
     />
     <!-- title and description -->
-    <title>Conversor de Imagens</title>
-    <meta name="description" content="Conversor de Imagens 100% gratuito." />
+    <title>Compressor de Imagens</title>
+    <meta name="description" content="Compressor de Imagens 100% gratuito." />
     <!-- Apple Icon when save to phone -->
     <link rel="apple-touch-icon" href="/assets/logo.webp" />
     <!-- favicon -->
@@ -20,20 +20,19 @@
     <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/styles/defaults.css" />
     <link rel="stylesheet" href="/tools/tools.css" />
-    <link rel="stylesheet" href="/tools/image-converter/image-converter.css" />
+    <link rel="stylesheet" href="/tools/image-compressor/image-compressor.css" />
     <!-- scripts -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script defer src="/tools/image-converter/image-converter.js"></script>
+    <script defer src="/tools/image-compressor/image-compressor.js"></script>
     <!-- analytics -->
     <script defer src="/js/mixpanel.js"></script>
   </head>
   <body>
     <main>
       <a id="back" href="/tools/"> <i class="fa fa-angle-left"></i> Voltar </a>
-      <h1>Conversor de Imagens</h1>
-      <p>Converte imagens de um formato para outro.</p>
+      <h1>Compressor de Imagens</h1>
+      <p>Comprime imagens PNG, JPEG, JPG, WEBP</p>
       <label for="fileInput" class="file-input-label">
         <span>Arraste ou clique para adicionar imagens</span>
       </label>
@@ -48,15 +47,14 @@
       <div id="image-container"></div>
 
       <div class="settings">
-        <label for="format">Formato de Saída:</label>
-        <select id="output">
-          <option value="jpg">JPG</option>
-          <option value="png">PNG</option>
-          <option value="webp">WEBP</option>
-        </select>
+        <div class="setting">
+          <label for="quality">Qualidade</label>
+          <input type="range" id="quality" min="1" max="100" value="50" />
+          <span id="qualityValue">50%</span>
+        </div>
       </div>
 
-      <button id="convertBtn" disabled>Converter</button>
+      <button id="convertBtn" disabled>Comprimir</button>
 
       <div class="result" id="result"></div>
 

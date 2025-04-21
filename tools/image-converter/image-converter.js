@@ -96,9 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'webp':
         mimeType = 'image/webp';
         break;
-      case 'ico':
-        mimeType = 'image/ico';
-        break;
     }
 
     convertedImageUrls = [];
@@ -147,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const url = convertedImageUrls[0];
       if (!url) return;
       const link = document.createElement('a');
-      link.download = `converted_1.${format}`;
+      link.download = `converted.${format}`;
       link.href = url;
       document.body.appendChild(link);
       link.click();

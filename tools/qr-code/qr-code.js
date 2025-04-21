@@ -11,7 +11,7 @@ function generateQR() {
   document.getElementById('qrCanvas').innerHTML = '';
 
   // Generate QR code
-  QRCode.toCanvas(link, { width: 200 }, function (error, canvas) {
+  QRCode.toCanvas(link, { width: 200, margin: 1 }, function (error, canvas) {
     if (error) {
       console.error(error);
       return;

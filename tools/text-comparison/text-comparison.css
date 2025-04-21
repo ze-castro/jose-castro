@@ -12,6 +12,7 @@
   min-height: 200px;
   resize: none;
   padding: 1rem;
+  font-size: var(--microcopy);
 }
 
 .text-container .buttons {

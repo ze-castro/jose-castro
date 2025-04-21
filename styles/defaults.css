@@ -108,6 +108,20 @@ button {
   font-family: var(--font-1);
   font-weight: var(--light);
 }
+button:hover:not(:disabled) {
+  transform: scale(1.03);
+  box-shadow: 0 0.5rem 1.1rem var(--shadow-2);
+}
+button:active:not(:disabled) {
+  transform: scale(1);
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-2);
+}
+button:disabled {
+  background-color: var(--gray-2);
+  color: var(--gray-4);
+  box-shadow: none;
+  cursor: not-allowed;
+}
 
 del {
   text-decoration: line-through;

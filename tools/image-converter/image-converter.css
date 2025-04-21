@@ -1,0 +1,93 @@
+/*
+<label for="fileInput" class="file-input-label">
+  <i class="fa fa-upload"></i>
+  <span>Escolher Imagem</span>
+</label>
+<input type="file" id="fileInput" class="file-input" accept="image/png, image/jpeg, image/jpg, image/webp, image/ico" />
+
+<div class="image-container">
+  <img src="" alt="image-converter" loading="lazy" />
+</div>
+
+<div class="settings">
+  <label for="format">Formato de Saída:</label>
+  <select id="output">
+    <option value="jpg">JPG</option>
+    <option value="png">PNG</option>
+    <option value="webp">WEBP</option>
+    <option value="ico">ICO</option>
+  </select>
+</div>
+
+<button id="convertBtn" disabled>Converter</button>
+
+<div class="result" id="result"></div>
+
+<button id="downloadBtn" class="download-btn">Download</button>
+*/
+
+#image-container {
+  width: 100%;
+  max-width: 700px;
+  overflow-x: auto;
+  background-color: var(--gray-1);
+  border-radius: var(--radius-4);
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+#image-container img {
+  max-width: 100%;
+  max-height: 100px;
+  border-radius: var(--radius-4);
+  box-shadow: 0 0.5rem 1rem var(--shadow-2);
+}
+.file-input-label {
+  display: inline-block;
+  padding: 2rem 2rem;
+  background-color: var(--gray-1);
+  border: 0.1rem dashed var(--gray-2);
+  color: var(--gray-4);
+  border-radius: var(--radius-4);
+  font-weight: var(--light);
+  cursor: pointer;
+}
+.file-input {
+  display: none;
+}
+.settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-2);
+  border-radius: var(--radius-4);
+  padding: 2rem;
+  margin: 1rem 0;
+}
+.settings label {
+  font-weight: var(--light);
+  color: var(--gray-4);
+}
+.settings select {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-4);
+  border: 1px solid var(--gray-2);
+  background-color: var(--gray-1);
+  color: var(--gray-4);
+}
+.result {
+  margin-top: 1rem;
+}
+.result img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+.download-btn {
+  display: none;
+  margin-top: 1rem;
+}

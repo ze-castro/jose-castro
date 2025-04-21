@@ -59,7 +59,7 @@
 })(document, window.mixpanel || []);
 
 // Init Mixpanel
-mixpanel.init('c598d1a47ad18620fb0bf2b14e3fcab7', {
+mixpanel.init('dfcbf0f84a75133faf878250599b0021', {
   debug: false,
   track_pageview: true,
   persistence: 'localStorage',

@@ -1,4 +1,4 @@
-//on load of page
+// on load of page
 document.addEventListener('DOMContentLoaded', () => {
   // check cookies
   if (checkCookies()) {
@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // detail the cookies we use in the website
   console.log('%cCookies we use:', 'font-weight: bold; font-size: 1.2rem;');
   console.log('\n');
-  console.log('%cMixpanel', 'font-weight: bold; font-size: 1.2rem;');
+  console.log('%cGoogle Analytics', 'font-weight: bold; font-size: 1.2rem;');
   console.log('https://policies.google.com/privacy');
-  console.log('We use Mixpanel to track the number of visitors of our website.');
+  console.log('We use Google Analytics to track the number of visitors of our website.');
   console.log('\n');
   console.log('%cLocal Storage', 'font-weight: bold; font-size: 1.2rem;');
   console.log(
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // accept cookies
 function acceptCookies() {
+  loadGoogleAnalytics();
   localStorage.setItem('cookies', true);
   const cookies = document.getElementById('cookies');
   cookies.style.bottom = '-5rem';
@@ -41,13 +42,30 @@ function acceptCookies() {
 function checkCookies() {
   const cookies = localStorage.getItem('cookies');
   if (cookies) {
+    loadGoogleAnalytics();
     return true;
   }
   return false;
 }
 
-//onclick of accept cookies button
+// onclick of accept cookies button
 const cookiesBtn = document.getElementById('cookies').getElementsByTagName('button')[0];
 cookiesBtn.addEventListener('click', acceptCookies);
+
+// load Google Analytics
+function loadGoogleAnalytics() {
+  const script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZQJTJZDSM8';
+  script.async = true;
+  document.head.appendChild(script);
+  
+  // initialize GA
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-ZQJTJZDSM8');
+}
 
 export { acceptCookies, checkCookies };

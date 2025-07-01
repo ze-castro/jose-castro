@@ -32,7 +32,7 @@ h1 {
   font-weight: var(--bold);
   text-align: center;
 }
-p {
+main p {
   font-size: var(--paragraph);
   font-weight: var(--light);
   color: var(--gray-5);

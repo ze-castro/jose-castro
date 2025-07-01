@@ -28,19 +28,13 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
     ></script>
     <script defer src="/tools/image-compressor/image-compressor.js"></script>
-    <!-- analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQJTJZDSM8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZQJTJZDSM8');
-    </script>
+    <script type="module" src="/js/cookies.js"></script>
   </head>
   <body>
+    <div id="cookies">
+      <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
+      <button>Entendi</button>
+    </div>
     <main>
       <a id="back" href="/tools/"> <i class="fa fa-angle-left"></i> Voltar </a>
       <h1>Compressor de Imagens</h1>

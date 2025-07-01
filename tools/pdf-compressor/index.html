@@ -26,19 +26,13 @@
     <script defer src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script defer src="/tools/pdf-compressor/pdf-compressor.js"></script>
-    <!-- analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQJTJZDSM8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZQJTJZDSM8');
-    </script>
+    <script type="module" src="/js/cookies.js"></script>
   </head>
   <body>
+    <div id="cookies">
+      <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
+      <button>Entendi</button>
+    </div>
     <main>
       <a id="back" href="/tools/"> <i class="fa fa-angle-left"></i> Voltar </a>
       <h1>Compressor de PDF</h1>

@@ -27,7 +27,16 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script defer src="/tools/pdf-compressor/pdf-compressor.js"></script>
     <!-- analytics -->
-    <script defer src="/js/mixpanel.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQJTJZDSM8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZQJTJZDSM8');
+    </script>
   </head>
   <body>
     <main>

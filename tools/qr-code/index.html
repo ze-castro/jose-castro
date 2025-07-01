@@ -25,17 +25,22 @@
     <script defer src="/tools/qr-code/qr-code.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
     <!-- analytics -->
-    <script defer src="/js/mixpanel.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQJTJZDSM8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZQJTJZDSM8');
+    </script>
   </head>
   <body>
     <main>
-      <a id="back" href="/tools/">
-        <i class="fa fa-angle-left"></i> Voltar
-      </a>
+      <a id="back" href="/tools/"> <i class="fa fa-angle-left"></i> Voltar </a>
       <h1>Gerador de Códigos QR</h1>
-      <p>
-        Insira o texto ou link que deseja converter em um código QR
-      </p>
+      <p>Insira o texto ou link que deseja converter em um código QR</p>
       <input type="text" id="linkInput" placeholder="Introduza o texto ou link aqui (ex: Teste)" />
       <button onclick="generateQR()">Começar</button>
       <div id="qrCanvas"></div>

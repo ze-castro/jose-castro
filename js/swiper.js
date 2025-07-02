@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
       onlyInViewport: true,
     },
     loop: true,
-    speed: 1500,
+    speed: 1000,
     direction: 'horizontal',
     spaceBetween: 15,
     slidesPerView: 1,
     autoplay: {
-      delay: 200,
+      delay: 2000,
     },
     breakpoints: {
       800: {

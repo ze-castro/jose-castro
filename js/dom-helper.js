@@ -1,4 +1,12 @@
 //// TOOLS ////
+// image loading animation
+document.querySelectorAll('img').forEach(img => {
+  const temp = new Image();
+  temp.onload = () => img.classList.add('loaded');
+  temp.src = img.src;
+  if (temp.complete) img.classList.add('loaded');
+});
+
 // observer
 const observer = new IntersectionObserver(
   (entries) => {

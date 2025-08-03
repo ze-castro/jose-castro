@@ -180,6 +180,21 @@ select {
   transition: var(--steady);
 }
 
+img {
+  background: linear-gradient(90deg, #d0d0d0 0%, transparent 40%, transparent 60%, #d0d0d0 100%);
+  background-size: 200% 100%;
+  animation: img-loading 0.75s linear infinite;
+}
+
+@keyframes img-loading {
+  to { background-position: -200% 0; }
+}
+
+img.loaded {
+  animation: none;
+  background: none;
+}
+
 /* COOKIES */
 #cookies {
   width: auto;

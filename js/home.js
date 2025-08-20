@@ -12,6 +12,14 @@ function updateYear() {
 }
 
 //// EVENT LISTENERS ////
+// onclick in the cv link
+document.getElementById('cv-link').addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = '/assets/cv.pdf';
+  link.download = 'cv.pdf';
+  link.click();
+});
+
 //onlick in the contact button
 document.getElementById('contact-btn').addEventListener('click', () => sendEmailBudget());
 

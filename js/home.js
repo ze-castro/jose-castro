@@ -16,7 +16,8 @@ function updateYear() {
 document.getElementById('cv-link').addEventListener('click', () => {
   const link = document.createElement('a');
   link.href = '/assets/cv.pdf';
-  link.download = 'cv.pdf';
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
   link.click();
 });
 

@@ -405,7 +405,7 @@ nav p:hover {
 }
 
 .swiper-slide:hover {
-  transform: scale(1.1) rotate(-2deg);
+  transform: scale(1.03) rotate(-1deg);
   filter: drop-shadow(0 0.5rem 0.7rem var(--shadow-1));
 }
 

@@ -30,8 +30,8 @@ document
   .addEventListener('click', () => scrollToSection('pricing'));
 
 // onclick in each service
-document.getElementById('learn-more-btn-1').addEventListener('click', sendEmail1);
-function sendEmail1() {
+document.getElementById('learn-more-btn-1').addEventListener('click', sendEmailSite);
+function sendEmailSite() {
   var email = 'ze.castro@icloud.com';
   var subject = '📂 Site | Zé Castro';
   var body = `
@@ -54,8 +54,8 @@ Olá, ...
   window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);
 }
 
-document.getElementById('learn-more-btn-2').addEventListener('click', sendEmail1);
-function sendEmail1() {
+document.getElementById('learn-more-btn-2').addEventListener('click', sendEmailStore);
+function sendEmailStore() {
   var email = 'ze.castro@icloud.com';
   var subject = '🛒 Loja Online | Zé Castro';
   var body = `

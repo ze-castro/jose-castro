@@ -33,9 +33,33 @@ document
 document.getElementById('learn-more-btn-1').addEventListener('click', sendEmail1);
 function sendEmail1() {
   var email = 'ze.castro@icloud.com';
-  var subject = '📂 Site | The Website Builder';
+  var subject = '📂 Site | Zé Castro';
   var body = `
 📂 Criação de Site
+━━━━━━━━━━━━━━━━━━
+
+➤ Nome: 
+➤ Contacto: 
+
+Mensagem:
+━━━━━━━━━
+Olá, ...
+
+
+━━━━━━━━━━━━━━━━━━
+📧 Enviado via website.
+  `
+    .trim()
+    .replace(/\n/g, '%0D%0A');
+  window.location.assign(`mailto:${email}?subject=${subject}&body=${body}`);
+}
+
+document.getElementById('learn-more-btn-2').addEventListener('click', sendEmail1);
+function sendEmail1() {
+  var email = 'ze.castro@icloud.com';
+  var subject = '🛒 Loja Online | Zé Castro';
+  var body = `
+🛒 Criação de Loja Online
 ━━━━━━━━━━━━━━━━━━
 
 ➤ Nome: 
@@ -57,7 +81,7 @@ Olá, ...
 document.getElementById('learn-more-btn-3').addEventListener('click', sendEmailBudget);
 function sendEmailBudget() {
   var email = 'ze.castro@icloud.com';
-  var subject = '💼 Pedido de Orçamento | The Website Builder';
+  var subject = '💼 Pedido de Orçamento | Zé Castro';
   var body = `
 💼 Pedido de Orçamento
 ━━━━━━━━━━━━━━━━━━
@@ -85,7 +109,7 @@ document.getElementById('scheduling-email').addEventListener('click', () => send
 document.getElementById('contact-email').addEventListener('click', () => sendEmailInfo());
 function sendEmailInfo() {
   var email = 'ze.castro@icloud.com';
-  var subject = 'ℹ️ Pedido de Informação | The Website Builder';
+  var subject = 'ℹ️ Pedido de Informação | Zé Castro';
   var body = `
   ℹ️ Pedido de Informação
   ━━━━━━━━━━━━━━━━━━

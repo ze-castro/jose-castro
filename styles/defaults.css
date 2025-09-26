@@ -13,6 +13,7 @@
   --green: #288d52;
   --light-green: #3dbf6d;
   --red: #be3939;
+  --light-red: #e04e4e;
   --yellow: #f5c518;
   --orange: #e46248;
   --blue: #0071e3;
@@ -35,6 +36,7 @@
   --shadow-1: rgba(0, 0, 0, 0.1);
   --shadow-2: rgba(0, 0, 0, 0.2);
   --shadow-3: rgba(0, 0, 0, 0.3);
+
   /* FONTS */
   --font-1: 'SFPro', sans-serif;
 
@@ -55,6 +57,7 @@
   --heavy: 700;
 
   /* BORDER RADIUS */
+  --radius-full: 9999px;
   --radius-1: 10rem;
   --radius-2: 2rem;
   --radius-3: 1rem;
@@ -126,8 +129,7 @@ del {
   color: var(--red);
 }
 
-a,
-a:visited {
+a {
   text-decoration: none;
   color: #06c;
 }

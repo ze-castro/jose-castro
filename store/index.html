@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title and description -->
+    <title>Loja</title>
+    <meta name="description" content="Loja de material informático recondicionado." />
+    <!-- Apple Icon when save to phone -->
+    <link rel="apple-touch-icon" href="/assets/logo.webp" />
+    <!-- favicon -->
+    <link rel="icon" href="/assets/logo.ico" type="image/ico" />
+    <!-- styles -->
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/styles/defaults.css" />
+    <link rel="stylesheet" href="/store/store.css" />
+    <!-- scripts -->
+    <script type="module" src="/js/cookies.js"></script>
+    <script type="module" src="/store/store.js"></script>
+  </head>
+  <body>
+    <div id="cookies">
+      <p>Este site utiliza cookies para garantir que tenha a melhor experiência nesta sessão.</p>
+      <button>Entendi</button>
+    </div>
+    <main>
+      <a id="back" href="/"> <i class="fa fa-angle-left"></i> Voltar </a>
+      <h1>Loja</h1>
+      <p>Todos os produtos são higienizados e testados.</p>
+      <ul class="products-breadcrumbs">
+        <li>
+          <button id="all" class="active">Todos</button>
+        </li>
+        <li>
+          <button id="computers">Computadores</button>
+        </li>
+        <li>
+          <button id="accessories">Acessórios</button>
+        </li>
+        <li>
+          <button id="other">Outros</button>
+        </li>
+        <li>
+          <button id="sold">Vendidos</button>
+        </li>
+      </ul>
+      <div class="products-list"></div>
+    </main>
+  </body>
+</html>

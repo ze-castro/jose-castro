@@ -73,8 +73,8 @@ nav p:hover {
   text-decoration: underline;
 }
 
-/* TOOLS LINK */
-#tools-link {
+/* TOOLS LINK & STORE LINK */
+#tools-link, #store-link {
   position: absolute;
   margin-top: 2.2rem;
   top: 0;
@@ -93,7 +93,11 @@ nav p:hover {
   transition: var(--steady);
 }
 
-#tools-link:hover {
+#tools-link {
+  top: 3.5rem;
+}
+
+#tools-link:hover, #store-link:hover {
   background-color: var(--gray-2);
 }
 

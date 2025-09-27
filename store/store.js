@@ -13,9 +13,7 @@ const products = [
     details: 'Apple M1, 8GB RAM, 256GB SSD',
     rating: 'A',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/04_01f07_pqpLd6zkotvqKxMhfJ55HdH8/f800/1750082598.jpeg?s=b72fae1f109b0984d61d34264536f0c6bb0f51f3',
-    link: 'https://www.vinted.pt/items/6008479250-macbook-pro-13-m1-8gb-256gb-com-caixa',
+    image: '/store/assets/1750082598.jpeg',
   },
   {
     id: 2,
@@ -24,9 +22,7 @@ const products = [
     details: 'Layout Português (PT) c/ Caixa Original',
     rating: 'A',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/04_005d0_UUJP8WVhbr1VQfBxMCrDv5BS/f800/1753912796.jpeg?s=8f10e33444e9e74f5cfdd88c78c69c1130a6d15e',
-    link: 'https://www.vinted.pt/items/6725535100-apple-magic-keyboard-2021-a2450-layout-pt',
+    image: '/store/assets/1753912796.jpeg',
   },
   {
     id: 3,
@@ -35,9 +31,7 @@ const products = [
     details: 'c/ Caixa Original',
     rating: 'A',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/02_0179c_nVM5cjonExfuFSwgW52aRTig/f800/1757433402.jpeg?s=dba2abf3b2295a5f12e4d5b07a7b645e72f582f4',
-    link: 'https://www.vinted.pt/items/7049322114-rato-apple-magic-mouse-2',
+    image: '/store/assets/1757433402.jpeg',
   },
   {
     id: 4,
@@ -46,9 +40,7 @@ const products = [
     details: 's/ Caixa',
     rating: 'C',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/04_0050e_ds99dy7pUjtKQBbsyYAHKASi/f800/1753275914.jpeg?s=8f032644ad06a8baf3b28ce0838bd9c4d7d1aef3',
-    link: 'https://www.vinted.pt/items/6736298265-tablet-7-acer-iconia-b1-710',
+    image: '/store/assets/1753275914.jpeg',
   },
   {
     id: 5,
@@ -57,34 +49,46 @@ const products = [
     details: 'Discos de 3.5" para NAS, com poucas horas de uso',
     rating: 'A',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/04_01e6a_zDb5jbSVTfBNV4SPHkJ4ZUSZ/f800/1751905795.jpeg?s=d2046ac2e1ef059a8787414d41f3a425a8d98db4',
-    link: 'https://www.vinted.pt/items/6642482962-hdd-wd-red-2tb',
+    image: '/store/assets/1751905795.jpeg',
   },
   {
     id: 6,
+    brand: 'Maivo',
+    title: 'Caixa para HDD/SSD 3.5" ou 2.5"',
+    details: 'c/ cabo USB e adaptador de corrente',
+    rating: 'A',
+    category: 'sold',
+    image: '/store/assets/1752101101.jpeg',
+  },
+  {
+    id: 7,
     brand: 'Logitech',
     title: 'Rato Logitech g304 wireless',
     details: 'Selado na caixa',
     rating: 'A',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/04_01135_48hH7kpsgAUGyiX9SjSuP1Su/f800/1751902447.jpeg?s=b26452cf6907e2bddfb099425f6378346b43e827',
-    link: 'https://www.vinted.pt/items/6642020775-rato-logitech-g304-wireless-selado-na-caixa',
+    image: '/store/assets/1751902447.jpeg',
   },
   {
-    id: 7,
+    id: 8,
+    brand: 'Logitech',
+    title: 'Rato Logitech G Pro X Superlight',
+    details: 's/ Caixa',
+    rating: 'C',
+    category: 'sold',
+    image: '/store/assets/1751033567.jpeg',
+  },
+  {
+    id: 9,
     brand: 'Sem marca',
     title: 'Adaptador Mini Displayport para HDMI (fêmea)',
     details: 's/ Caixa',
     rating: 'B',
     category: 'sold',
-    image:
-      'https://images1.vinted.net/t/04_01537_QpUY4ZhLhpF6cuhw55oFkqBB/f800/1750356958.jpeg?s=fe61ff11c03edbc856de8065bd8872330818d48b',
-    link: 'https://www.vinted.pt/items/6543277534-adaptador-mini-displayport-para-hdmi-femea',
+    image: '/store/assets/1750356958.jpeg',
   },
   {
-    id: 8,
+    id: 10,
     brand: 'Xiaomi',
     title: 'Tapete de Rato Xiaomi',
     details: 's/ embalagem original',
@@ -95,7 +99,7 @@ const products = [
     link: 'https://www.vinted.pt/items/5668164610-tapete-de-rato-xiaomi',
   },
   {
-    id: 8,
+    id: 11,
     brand: 'Sem marca',
     title: 'Kit Superlight para Logitech G305 (41g)',
     details:
@@ -107,7 +111,7 @@ const products = [
     link: 'https://www.vinted.pt/items/6669588554-kit-superlight-para-logitech-g305-41g',
   },
   {
-    id: 9,
+    id: 12,
     brand: 'Sem marca',
     title: 'Cabo MicroUSB para Logitech G Pro X Superlight 1',
     details: 'c/ embalagem original',
@@ -118,7 +122,7 @@ const products = [
     link: 'https://www.vinted.pt/items/6710337399-cabo-microusb-para-logitech-g-pro-x-superlight-1',
   },
   {
-    id: 10,
+    id: 13,
     brand: 'Sem marca',
     title: 'Caixa para Raspberry Pi 5 de metal',
     details: 'c/ embalagem original',
@@ -129,7 +133,7 @@ const products = [
     link: 'https://www.vinted.pt/items/6766388588-caixa-para-raspberry-pi-5-de-metal-arrefecimento-passivo',
   },
   {
-    id: 11,
+    id: 14,
     brand: 'Sem marca',
     title: 'E-Reader Tagus Gea (2019) [Avariado]',
     details: 's/ caixa, ecrã funciona, mas sistema operativo não arranca',
@@ -140,9 +144,9 @@ const products = [
     link: 'https://www.vinted.pt/items/7102363717-e-reader-tagus-gea-2019-avariado',
   },
   {
-    id: 12,
+    id: 15,
     brand: 'Apple',
-    title: 'Magic Mouse 2 (2020)',
+    title: 'Magic Mouse 2',
     details: 's/ Caixa',
     rating: 'C',
     category: 'accessories',
@@ -151,9 +155,9 @@ const products = [
     link: 'https://www.vinted.pt/items/7175050228-rato-apple-magic-mouse-2-ler-descricao',
   },
   {
-    id: 13,
+    id: 16,
     brand: 'Apple',
-    title: 'Magic Keyboard (2020)',
+    title: 'Magic Keyboard',
     details: 'c/ Caixa e Cabo originais, tem sinais de uso na parte inferior',
     rating: 'B',
     category: 'accessories',
@@ -174,7 +178,11 @@ function createProductItem(product) {
         <p class="product-rating product-rating-${product.rating}">${product.rating}</p>
         <h3 class="product-title">${product.title}</h3>
         <p class="product-details">${product.details}</p>
-        <a href="${product.link}" target="_blank" rel="noopener noreferrer" class="product-link" data-product-id="${product.id}">Ver mais</a>
+        ${
+          product.link ?
+          `<a href="${product.link}" target="_blank" rel="noopener noreferrer" class="product-link" data-product-id="${product.id}">Ver mais</a>`
+        : ''
+        }
       </div>
     </div>
   `;

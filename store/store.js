@@ -149,10 +149,9 @@ const products = [
     title: 'Magic Mouse 2',
     details: 's/ Caixa',
     rating: 'C',
-    category: 'accessories',
+    category: 'sold',
     image:
       'https://images1.vinted.net/t/04_00c73_CLsdDA5XiizRFBe7PBT22sha/f800/1758920123.jpeg?s=6bfbba9669af0ce79177ec8054ba3a87f157fd56',
-    link: 'https://www.vinted.pt/items/7175050228-rato-apple-magic-mouse-2-ler-descricao',
   },
   {
     id: 16,
@@ -163,7 +162,7 @@ const products = [
     category: 'accessories',
     image:
       'https://images1.vinted.net/t/04_01631_HARs1PMfaLJ7vahHvAJhuAGY/f800/1758895367.jpeg?s=a2ba62fd214b10e7c5e422a6c093c3319f29d7b0',
-    link: 'https://www.vinted.pt/items/7172276724-teclado-apple-magic-keyboard-ler-descricao',
+    link: 'https://www.vinted.pt/items/7172276724-teclado-apple-magic-keyboard',
   },
 ];
 
